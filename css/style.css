@@ -1,35 +1,50 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Libre Baskerville', serif;
-  background-color: #ffffff;
-  color: #111111;
+  background-color: #fff;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* NAVIGATION */
+nav {
+  background-color: #fff;
+  padding: 1.5rem 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
   margin: 0;
   padding: 0;
 }
 
-header, footer {
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #555;
+}
+
+/* HEADER */
+header {
+  background-color: #000;
+  color: #fff;
   text-align: center;
-  padding: 2rem 1rem;
-  background-color: #000000;
-  color: #ffffff;
+  padding: 3rem 1rem;
 }
 
-h1, h2 {
-  margin: 0 0 1rem 0;
-}
-
-main {
-  padding: 2rem 1rem;
-}
-
-.blog-preview p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-/* 🆕 This is the new layout styling */
-.content-wrapper {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: left;
-}
+header h1 {
+  font-size: 2rem;
