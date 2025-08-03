@@ -96,6 +96,13 @@ footer {
   background-color: #fff;
   border-top: 1px solid #ddd;
   margin-top: 4rem;
+  .content-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+}
+
   font-size: 0.9rem;
   color: #888;
 }
