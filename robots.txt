@@ -1,3 +1,11 @@
+# robots.txt for gvancouverhomes.com
+# Designed for fast, full indexing of all luxury real estate pages
+
 User-agent: *
 Allow: /
+
 Sitemap: https://gvancouverhomes.com/sitemap.xml
+
+# If any directories should be private or not indexed, add Disallow rules below:
+# Disallow: /private/
+# Disallow: /test/
