@@ -4,14 +4,13 @@ title: Greater Vancouver Homes
 description: Real estate for people who move with intention. Clarity, privacy, real experience. Serving high-value buyers and sellers in Greater Vancouver.
 ---
 
-<!-- Navigation -->
 <nav class="nav">
   <ul>
     <li><a href="{{ '/' | relative_url }}">Home</a></li>
     <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
     <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
     <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
-    <li><a href="{{ '/search-bridge.html' | relative_url }}">Search Bridge</a></li>
+    <li><a href="{{ '/search.html' | relative_url }}">Search</a></li>
     <li><a href="{{ '/privacy.html' | relative_url }}">Privacy</a></li>
     <li><a href="{{ '/terms.html' | relative_url }}">Terms</a></li>
     <li><a href="{{ '/accessibility.html' | relative_url }}">Accessibility</a></li>
@@ -19,6 +18,7 @@ description: Real estate for people who move with intention. Clarity, privacy, r
 </nav>
 
 <header class="hero">
+  <img src="/assets/images/hero.png" alt="Greater Vancouver luxury home" class="hero-img">
   <h1>This space is built for people who move with intention.</h1>
   <p>Families who know what matters. Buyers and sellers who value clarity, privacy, and real experience.</p>
 </header>
