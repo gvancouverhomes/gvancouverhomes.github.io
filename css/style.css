@@ -1,55 +1,207 @@
-/* Hero Section Styles */
-.hero {
-  background: #f7f7f8;
-  padding: 3.5rem 1rem 3rem 1rem;
-  text-align: center;
-  border-radius: 28px;
-  margin-bottom: 4rem;
-  box-shadow: 0 6px 32px rgba(0,0,0,0.07);
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
+/* Use Libre Baskerville for everything. Font is loaded in the layout head, not here. */
+
+/* Reset + base styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.hero-img {
-  max-width: 480px;
+body {
+  font-family: 'Libre Baskerville', serif;
+  background: #fff;
+  color: #1a1a1a;
+  min-height: 100vh;
+  font-size: 18px;
+  line-height: 1.68;
+  letter-spacing: 0.01em;
+}
+
+/* Navigation */
+.nav {
   width: 100%;
-  margin: 0 auto 2.5rem auto;
-  display: block;
-  border-radius: 20px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.11);
+  background: #111;
+  padding: 1.2rem 0 1rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-bottom: 0;
+  position: relative;
+  z-index: 100;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2.2rem;
+}
+
+.nav li {
+  display: inline;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.08rem;
+  transition: color 0.15s;
+  letter-spacing: 0.08em;
+  padding-bottom: 2px;
+}
+
+.nav a:hover {
+  color: #2b66ff;
+  text-decoration: underline;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 3.5rem 1rem 2.5rem 1rem;
+  background: #fff;
 }
 
 .hero h1 {
-  font-size: 2.6rem;
-  margin-bottom: 1.2rem;
-  letter-spacing: -0.03em;
-  color: #18191a;
-  font-family: 'Libre Baskerville', serif;
+  font-size: 2.7rem;
   font-weight: 700;
+  margin-bottom: 1.1rem;
+  margin-top: 0;
+  letter-spacing: 0.01em;
+  color: #181818;
 }
 
 .hero p {
-  font-size: 1.25rem;
-  color: #333;
-  max-width: 620px;
+  font-size: 1.22rem;
+  color: #595959;
   margin: 0 auto;
-  font-family: 'Libre Baskerville', serif;
+  max-width: 540px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
 }
 
-@media (max-width: 700px) {
-  .hero {
-    padding: 2rem 0.5rem 2rem 0.5rem;
-    border-radius: 18px;
-  }
-  .hero-img {
-    max-width: 100%;
-    border-radius: 14px;
+/* Blog preview */
+.blog-preview {
+  background: #f6f6f6;
+  padding: 2.3rem 1.4rem 2rem 1.4rem;
+  max-width: 600px;
+  margin: 2.5rem auto 1.2rem auto;
+  border-radius: 18px;
+  box-shadow: 0 2px 18px 0 rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+.blog-preview h2 {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #181818;
+}
+
+.blog-excerpt h3 {
+  margin-top: 0.6rem;
+  margin-bottom: 0.7rem;
+  font-size: 1.17rem;
+  font-weight: 700;
+  color: #262626;
+}
+
+.blog-excerpt p {
+  color: #333;
+  font-size: 1.01rem;
+  margin-bottom: 0.4rem;
+  margin-top: 0.3rem;
+  font-weight: 400;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 0.3rem;
+  color: #2b66ff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.01rem;
+  border-bottom: 1.5px solid #2b66ff;
+  transition: background 0.15s;
+  padding: 2px 6px 0 6px;
+  border-radius: 5px;
+}
+.read-more:hover {
+  background: #e0edff;
+}
+
+/* How I Work section */
+.how-i-work-preview {
+  max-width: 600px;
+  margin: 2.5rem auto 2.5rem auto;
+  padding: 1.6rem 1.3rem 1.2rem 1.5rem;
+  border-left: 4px solid #222;
+  background: #f9f9f9;
+  border-radius: 11px;
+  box-shadow: 0 1px 8px 0 rgba(0,0,0,0.04);
+}
+
+.how-i-work-preview h2 {
+  font-size: 1.32rem;
+  margin-bottom: 0.8rem;
+  margin-top: 0;
+  color: #151515;
+  font-weight: 700;
+}
+
+.how-i-work-preview ul {
+  list-style: disc inside;
+  margin-left: 1.25rem;
+  margin-bottom: 0;
+  margin-top: 0.65rem;
+  color: #252525;
+  font-size: 1.01rem;
+}
+
+.how-i-work-preview li {
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+/* Footer */
+footer {
+  background: #202020;
+  color: #fff;
+  text-align: center;
+  padding: 1.18rem 0 1.18rem 0;
+  font-size: 0.97rem;
+  margin-top: 2.4rem;
+  letter-spacing: 0.035em;
+  border-top: 1.5px solid #181818;
+  box-shadow: 0 -1px 4px rgba(0,0,0,0.03);
+}
+
+/* Responsive tweaks */
+@media (max-width: 800px) {
+  .nav ul {
+    gap: 1.1rem;
   }
   .hero h1 {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
-  .hero p {
-    font-size: 1.04rem;
+  .blog-preview, .how-i-work-preview {
+    max-width: 95vw;
+    padding: 1.1rem 0.6rem;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    font-size: 16px;
+  }
+  .hero h1 {
+    font-size: 1.45rem;
+  }
+  .nav ul {
+    gap: 0.7rem;
   }
 }
