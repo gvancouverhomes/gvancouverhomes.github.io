@@ -8,7 +8,7 @@ permalink: /
 <div class="hero">
   <img src="/assets/images/hero.png" alt="Vancouver skyline" class="hero-img">
   <h1>Welcome to Greater Vancouver Homes</h1>
-  <p>Your trusted partner for ultra-luxury real estate—clarity, privacy, and real experience in the heart of Vancouver.</p>
+  <p>Your trusted partner for ultra-luxury real estate, offering clarity, privacy, and real experience in the heart of Vancouver.</p>
 </div>
 
 ## Latest Insights
