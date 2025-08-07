@@ -5,9 +5,11 @@ description: "Ultra-luxury real estate with clarity, privacy, and trusted experi
 permalink: /
 ---
 
-# Welcome to Greater Vancouver Homes
-
-Your trusted partner for ultra-luxury real estate — clarity, privacy, and real experience in the heart of Vancouver.
+<div class="hero">
+  <img src="/assets/images/hero.png" alt="Vancouver skyline" class="hero-img">
+  <h1>Welcome to Greater Vancouver Homes</h1>
+  <p>Your trusted partner for ultra-luxury real estate—clarity, privacy, and real experience in the heart of Vancouver.</p>
+</div>
 
 ## Latest Insights
 
@@ -29,4 +31,3 @@ Decisions are made with confidence, not noise.
 Your time, energy, and long-term vision are protected at every step.
 
 [Learn more about how I work](/how-i-get-results/)
-
