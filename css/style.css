@@ -1,3 +1,6 @@
+---
+---
+
 /* ===== Base ===== */
 :root {
   --max-w: 1100px;
@@ -58,7 +61,7 @@ body, p, li { font-size: clamp(16px, 2.2vw, 19px); }
   display: grid;
   place-items: center;
   text-align: center;
-  background-image: url("/assets/hero.png"); /* change if your image lives elsewhere */
+  background-image: url("{{ '/assets/hero.png' | relative_url }}");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
