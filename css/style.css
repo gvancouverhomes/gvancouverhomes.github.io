@@ -21,11 +21,7 @@ body {
 img, video { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
 
-.wrapper {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 0 var(--pad);
-}
+.wrapper { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad); }
 
 /* ===== Typography ===== */
 h1, h2, h3, h4 { line-height: 1.25; margin: 0 0 12px; }
@@ -38,20 +34,10 @@ body, p, li { font-size: clamp(16px, 2.2vw, 19px); }
 
 /* ===== Navigation ===== */
 .nav {
-  display: flex;
-  gap: 18px;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 14px 0;
-  border-bottom: 1px solid #eee;
+  display: flex; gap: 18px; align-items: center; justify-content: center;
+  flex-wrap: wrap; padding: 14px 0; border-bottom: 1px solid #eee;
 }
-.nav a {
-  text-decoration: none;
-  color: #111;
-  font-size: 15px;
-  padding: 6px 4px;
-}
+.nav a { text-decoration: none; color: #111; font-size: 15px; padding: 6px 4px; }
 .nav a.active { font-weight: 700; }
 
 /* ===== Hero ===== */
@@ -63,14 +49,21 @@ body, p, li { font-size: clamp(16px, 2.2vw, 19px); }
   text-align: center;
   background-image: url("{{ '/assets/hero.png' | relative_url }}");
   background-size: cover;
-  background-position: center;
+  background-position: right top; /* keep watermark in view on wide screens */
   background-repeat: no-repeat;
 }
+
 .hero .hero-inner {
-  background: rgba(255,255,255,0.75);
+  /* Image now has blur/overlay baked in, so keep panel transparent */
+  background: transparent;
   padding: 18px 22px;
   border-radius: 10px;
-  backdrop-filter: blur(4px);
+  /* removed: backdrop-filter: blur(...) */
+}
+
+/* Mobile tweak: center horizontally, keep top alignment */
+@media (max-width: 600px) {
+  .hero { background-position: center top; }
 }
 
 /* ===== Sections ===== */
