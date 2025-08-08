@@ -2,31 +2,17 @@
 ---
 
 /* ===== Base ===== */
-:root {
-  --max-w: 1100px;
-  --pad: 20px;
-  --lh: 1.55;
-}
-
+:root { --max-w: 1100px; --pad: 20px; --lh: 1.55; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body {
-  font-family: "Libre Baskerville", serif;
-  line-height: var(--lh);
-  margin: 0;
-  color: #111;
-  background: #fff;
-}
-
+body { font-family: "Libre Baskerville", serif; line-height: var(--lh); margin: 0; color: #111; background: #fff; }
 img, video { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
-
 .wrapper { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad); }
 
 /* ===== Typography ===== */
 h1, h2, h3, h4 { line-height: 1.25; margin: 0 0 12px; }
 p { margin: 0 0 16px; }
-
 h1 { font-size: clamp(28px, 4vw, 48px); }
 h2 { font-size: clamp(22px, 3vw, 32px); }
 h3 { font-size: clamp(18px, 2.4vw, 24px); }
@@ -34,10 +20,20 @@ body, p, li { font-size: clamp(16px, 2.2vw, 19px); }
 
 /* ===== Navigation ===== */
 .nav {
-  display: flex; gap: 18px; align-items: center; justify-content: center;
-  flex-wrap: wrap; padding: 14px 0; border-bottom: 1px solid #eee;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
 }
-.nav a { text-decoration: none; color: #111; font-size: 15px; padding: 6px 4px; }
+.nav a {
+  text-decoration: none;
+  color: #111;
+  font-size: 15px;
+  padding: 6px 4px;
+}
 .nav a.active { font-weight: 700; }
 
 /* ===== Hero ===== */
@@ -47,23 +43,27 @@ body, p, li { font-size: clamp(16px, 2.2vw, 19px); }
   display: grid;
   place-items: center;
   text-align: center;
-  background-image: url("{{ '/assets/hero.png' | relative_url }}");
+  background-image: url("/assets/images/hero.png");
   background-size: cover;
-  background-position: right top; /* keep watermark in view on wide screens */
+  background-position: right top; /* Keep watermark in view on desktop */
   background-repeat: no-repeat;
 }
 
+/* Hero overlay card */
 .hero .hero-inner {
-  /* Image now has blur/overlay baked in, so keep panel transparent */
-  background: transparent;
+  background: rgba(255, 255, 255, 0.65); /* Soft translucent white */
   padding: 18px 22px;
   border-radius: 10px;
-  /* removed: backdrop-filter: blur(...) */
+  max-width: 90%;
 }
 
-/* Mobile tweak: center horizontally, keep top alignment */
+/* Mobile tweak: center image horizontally, keep top alignment */
 @media (max-width: 600px) {
   .hero { background-position: center top; }
+  .hero .hero-inner {
+    padding: 14px 16px;
+    max-width: 95%;
+  }
 }
 
 /* ===== Sections ===== */
@@ -104,10 +104,9 @@ footer {
 .mt-24 { margin-top: 24px !important; }
 .mb-24 { margin-bottom: 24px !important; }
 
-/* ===== Mobile tweaks ===== */
+/* ===== Mobile general ===== */
 @media (max-width: 600px) {
   .hero { min-height: 64vh; }
-  .hero .hero-inner { padding: 14px 16px; }
   .nav a { font-size: 14px; }
   .section { padding: 40px 0; }
 }
