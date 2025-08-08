@@ -58,18 +58,29 @@
   </script>
 </head>
 <body>
-  {% include header.html %}
 
+  <!-- Header / Navigation -->
+  <nav class="nav wrapper">
+    <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a>
+    <a href="/about.html" {% if page.url == "/about.html" %}class="active"{% endif %}>About</a>
+    <a href="/blog/" {% if page.url contains "/blog/" %}class="active"{% endif %}>Blog</a>
+    <a href="/contact.html" {% if page.url == "/contact.html" %}class="active"{% endif %}>Contact</a>
+    <a href="/search-bridge.html" {% if page.url == "/search-bridge.html" %}class="active"{% endif %}>Search Bridge</a>
+    <a href="/privacy.html" {% if page.url == "/privacy.html" %}class="active"{% endif %}>Privacy</a>
+    <a href="/terms.html" {% if page.url == "/terms.html" %}class="active"{% endif %}>Terms</a>
+  </nav>
+
+  <!-- Main content -->
   <main role="main">
     {{ content }}
   </main>
 
-  {% include footer.html %}
+  <!-- Footer -->
+  <footer>
+    <div class="wrapper">
+      © {{ site.time | date: '%Y' }} Greater Vancouver Homes. All rights reserved.
+    </div>
+  </footer>
 
-  <!-- Year autofill if you prefer HTML-only footer -->
-  <script>
-    const y = document.getElementById('y');
-    if (y) y.textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
