@@ -4,17 +4,72 @@
   <meta charset="UTF-8">
   <title>{% if page.title %}{{ page.title }} | {% endif %}Greater Vancouver Homes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% if page.description %}
-    <meta name="description" content="{{ page.description }}">
-  {% endif %}
-  <!-- Libre Baskerville font -->
-  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700&display=swap" rel="stylesheet">
-  <!-- Main CSS (loads from /css/style.css) -->
-  <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
-  <!-- Optional: favicon (if you have it) -->
-  <link rel="icon" type="image/png" href="{{ '/assets/favicon.png' | relative_url }}">
+  <meta name="description" content="{{ page.description | default: 'Discreet, high-level guidance for affluent buyers and sellers relocating to Greater Vancouver.' }}">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon.ico">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ page.title | default: 'Greater Vancouver Homes' }}">
+  <meta property="og:description" content="{{ page.description | default: 'Discreet, high-level guidance for affluent buyers and sellers relocating to Greater Vancouver.' }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="https://gvancouverhomes.com/assets/og-hero.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | default: 'Greater Vancouver Homes' }}">
+  <meta name="twitter:description" content="{{ page.description | default: 'Discreet, high-level guidance for affluent buyers and sellers relocating to Greater Vancouver.' }}">
+  <meta name="twitter:image" content="https://gvancouverhomes.com/assets/og-hero.jpg">
+
+  <!-- Schema: RealEstateAgent -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Greater Vancouver Homes",
+    "url": "https://gvancouverhomes.com/",
+    "logo": "https://gvancouverhomes.com/assets/logo.png",
+    "image": "https://gvancouverhomes.com/assets/og-hero.jpg",
+    "areaServed": "Greater Vancouver, BC",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Surrey",
+      "addressRegion": "BC",
+      "addressCountry": "CA"
+    },
+    "sameAs": [
+      "https://www.youtube.com/@gvancouverhomes",
+      "https://www.instagram.com/gvancouverhomes",
+      "https://www.linkedin.com/in/tanvirbhupal"
+    ]
+  }
+  </script>
 </head>
 <body>
-  {{ content }}
+  {% include header.html %}
+
+  <main role="main">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  <!-- Year autofill if you prefer HTML-only footer -->
+  <script>
+    const y = document.getElementById('y');
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
