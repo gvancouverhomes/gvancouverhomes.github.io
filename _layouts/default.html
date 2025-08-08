@@ -10,7 +10,7 @@
   <link rel="canonical" href="{{ page.url | absolute_url }}">
 
   <!-- Favicon -->
-  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
 
   <!-- Open Graph -->
   <meta property="og:title" content="{{ page.title | default: 'Greater Vancouver Homes' }}">
@@ -61,13 +61,13 @@
 
   <!-- Header / Navigation -->
   <nav class="nav wrapper">
-    <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a>
-    <a href="/about.html" {% if page.url == "/about.html" %}class="active"{% endif %}>About</a>
-    <a href="/blog/" {% if page.url contains "/blog/" %}class="active"{% endif %}>Blog</a>
-    <a href="/contact.html" {% if page.url == "/contact.html" %}class="active"{% endif %}>Contact</a>
-    <a href="/search-bridge.html" {% if page.url == "/search-bridge.html" %}class="active"{% endif %}>Search Bridge</a>
-    <a href="/privacy.html" {% if page.url == "/privacy.html" %}class="active"{% endif %}>Privacy</a>
-    <a href="/terms.html" {% if page.url == "/terms.html" %}class="active"{% endif %}>Terms</a>
+    <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
+    <a href="{{ '/about.html' | relative_url }}" {% if page.url == '/about.html' %}class="active"{% endif %}>About</a>
+    <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog/' %}class="active"{% endif %}>Blog</a>
+    <a href="{{ '/contact.html' | relative_url }}" {% if page.url == '/contact.html' %}class="active"{% endif %}>Contact</a>
+    <a href="{{ '/search.html' | relative_url }}" {% if page.url == '/search.html' %}class="active"{% endif %}>Search</a>
+    <a href="{{ '/privacy.html' | relative_url }}" {% if page.url == '/privacy.html' %}class="active"{% endif %}>Privacy</a>
+    <a href="{{ '/terms.html' | relative_url }}" {% if page.url == '/terms.html' %}class="active"{% endif %}>Terms</a>
   </nav>
 
   <!-- Main content -->
