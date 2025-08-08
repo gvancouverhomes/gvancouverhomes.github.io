@@ -1,207 +1,117 @@
-/* Use Libre Baskerville for everything. Font is loaded in the layout head, not here. */
-
-/* Reset + base styles */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+/* ===== Base ===== */
+:root {
+  --max-w: 1100px;
+  --pad: 20px;
+  --lh: 1.55;
 }
 
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
-  font-family: 'Libre Baskerville', serif;
-  background: #fff;
-  color: #1a1a1a;
-  min-height: 100vh;
-  font-size: 18px;
-  line-height: 1.68;
-  letter-spacing: 0.01em;
-}
-
-/* Navigation */
-.nav {
-  width: 100%;
-  background: #111;
-  padding: 1.2rem 0 1rem 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  margin-bottom: 0;
-  position: relative;
-  z-index: 100;
-}
-
-.nav ul {
-  list-style: none;
+  font-family: "Libre Baskerville", serif;
+  line-height: var(--lh);
   margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 2.2rem;
-}
-
-.nav li {
-  display: inline;
-}
-
-.nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1.08rem;
-  transition: color 0.15s;
-  letter-spacing: 0.08em;
-  padding-bottom: 2px;
-}
-
-.nav a:hover {
-  color: #2b66ff;
-  text-decoration: underline;
-}
-
-/* Hero section */
-.hero {
-  text-align: center;
-  padding: 3.5rem 1rem 2.5rem 1rem;
+  color: #111;
   background: #fff;
 }
 
-.hero h1 {
-  font-size: 2.7rem;
-  font-weight: 700;
-  margin-bottom: 1.1rem;
-  margin-top: 0;
-  letter-spacing: 0.01em;
-  color: #181818;
-}
+img, video { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
 
-.hero p {
-  font-size: 1.22rem;
-  color: #595959;
+.wrapper {
+  max-width: var(--max-w);
   margin: 0 auto;
-  max-width: 540px;
-  font-weight: 400;
-  letter-spacing: 0.01em;
+  padding: 0 var(--pad);
 }
 
-/* Blog preview */
-.blog-preview {
-  background: #f6f6f6;
-  padding: 2.3rem 1.4rem 2rem 1.4rem;
-  max-width: 600px;
-  margin: 2.5rem auto 1.2rem auto;
-  border-radius: 18px;
-  box-shadow: 0 2px 18px 0 rgba(0,0,0,0.06);
-  text-align: center;
-}
+/* ===== Typography ===== */
+h1, h2, h3, h4 { line-height: 1.25; margin: 0 0 12px; }
+p { margin: 0 0 16px; }
 
-.blog-preview h2 {
-  margin-top: 0;
-  margin-bottom: 1.2rem;
-  font-size: 1.45rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  color: #181818;
-}
+h1 { font-size: clamp(28px, 4vw, 48px); }
+h2 { font-size: clamp(22px, 3vw, 32px); }
+h3 { font-size: clamp(18px, 2.4vw, 24px); }
+body, p, li { font-size: clamp(16px, 2.2vw, 19px); }
 
-.blog-excerpt h3 {
-  margin-top: 0.6rem;
-  margin-bottom: 0.7rem;
-  font-size: 1.17rem;
-  font-weight: 700;
-  color: #262626;
+/* ===== Navigation ===== */
+.nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
 }
-
-.blog-excerpt p {
-  color: #333;
-  font-size: 1.01rem;
-  margin-bottom: 0.4rem;
-  margin-top: 0.3rem;
-  font-weight: 400;
-}
-
-.read-more {
-  display: inline-block;
-  margin-top: 0.3rem;
-  color: #2b66ff;
-  font-weight: 700;
+.nav a {
   text-decoration: none;
-  font-size: 1.01rem;
-  border-bottom: 1.5px solid #2b66ff;
-  transition: background 0.15s;
-  padding: 2px 6px 0 6px;
-  border-radius: 5px;
+  color: #111;
+  font-size: 15px;
+  padding: 6px 4px;
 }
-.read-more:hover {
-  background: #e0edff;
-}
+.nav a.active { font-weight: 700; }
 
-/* How I Work section */
-.how-i-work-preview {
-  max-width: 600px;
-  margin: 2.5rem auto 2.5rem auto;
-  padding: 1.6rem 1.3rem 1.2rem 1.5rem;
-  border-left: 4px solid #222;
-  background: #f9f9f9;
-  border-radius: 11px;
-  box-shadow: 0 1px 8px 0 rgba(0,0,0,0.04);
-}
-
-.how-i-work-preview h2 {
-  font-size: 1.32rem;
-  margin-bottom: 0.8rem;
-  margin-top: 0;
-  color: #151515;
-  font-weight: 700;
-}
-
-.how-i-work-preview ul {
-  list-style: disc inside;
-  margin-left: 1.25rem;
-  margin-bottom: 0;
-  margin-top: 0.65rem;
-  color: #252525;
-  font-size: 1.01rem;
-}
-
-.how-i-work-preview li {
-  margin-bottom: 0.5rem;
-  font-weight: 400;
-  line-height: 1.55;
-}
-
-/* Footer */
-footer {
-  background: #202020;
-  color: #fff;
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  min-height: 72vh;
+  display: grid;
+  place-items: center;
   text-align: center;
-  padding: 1.18rem 0 1.18rem 0;
-  font-size: 0.97rem;
-  margin-top: 2.4rem;
-  letter-spacing: 0.035em;
-  border-top: 1.5px solid #181818;
-  box-shadow: 0 -1px 4px rgba(0,0,0,0.03);
+  background-image: url("/assets/hero.png"); /* change if your image lives elsewhere */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero .hero-inner {
+  background: rgba(255,255,255,0.75);
+  padding: 18px 22px;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
 }
 
-/* Responsive tweaks */
-@media (max-width: 800px) {
-  .nav ul {
-    gap: 1.1rem;
-  }
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .blog-preview, .how-i-work-preview {
-    max-width: 95vw;
-    padding: 1.1rem 0.6rem;
-  }
+/* ===== Sections ===== */
+.section { padding: 56px 0; }
+.section--tight { padding: 32px 0; }
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 1px solid #111;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #111;
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+.btn:hover { background: #111; color: #fff; }
+
+/* ===== Footer ===== */
+footer {
+  padding: 28px 0;
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+  border-top: 1px solid #eee;
+  margin-top: 40px;
 }
 
-@media (max-width: 500px) {
-  body {
-    font-size: 16px;
-  }
-  .hero h1 {
-    font-size: 1.45rem;
-  }
-  .nav ul {
-    gap: 0.7rem;
-  }
+/* ===== Blog basics ===== */
+.post-header { margin: 24px 0 16px; }
+.post-meta { color: #666; font-size: 14px; margin-bottom: 16px; }
+.post-content p + h2, .post-content p + h3 { margin-top: 24px; }
+.post-content ul, .post-content ol { padding-left: 20px; }
+
+/* ===== Utilities ===== */
+.mt-0 { margin-top: 0 !important; }
+.mb-0 { margin-bottom: 0 !important; }
+.mt-24 { margin-top: 24px !important; }
+.mb-24 { margin-bottom: 24px !important; }
+
+/* ===== Mobile tweaks ===== */
+@media (max-width: 600px) {
+  .hero { min-height: 64vh; }
+  .hero .hero-inner { padding: 14px 16px; }
+  .nav a { font-size: 14px; }
+  .section { padding: 40px 0; }
 }
