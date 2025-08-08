@@ -1,54 +1,38 @@
 ---
 layout: default
 title: Greater Vancouver Homes
-description: Real estate for people who move with intention. Clarity, privacy, real experience. Serving high-value buyers and sellers in Greater Vancouver.
+description: Discreet, high-level guidance for people relocating to Greater Vancouver or preparing to sell with intention.
 ---
 
-<nav class="nav">
-  <ul>
-    <li><a href="{{ '/' | relative_url }}">Home</a></li>
-    <li><a href="{{ '/about.html' | relative_url }}">About</a></li>
-    <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
-    <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
-    <li><a href="{{ '/search.html' | relative_url }}">Search</a></li>
-    <li><a href="{{ '/privacy.html' | relative_url }}">Privacy</a></li>
-    <li><a href="{{ '/terms.html' | relative_url }}">Terms</a></li>
-    <li><a href="{{ '/accessibility.html' | relative_url }}">Accessibility</a></li>
-  </ul>
-</nav>
-
 <header class="hero">
-  <img src="/assets/images/hero.png" alt="Greater Vancouver luxury home" class="hero-img">
-  <h1>This space is built for people who move with intention.</h1>
-  <p>Families who know what matters. Buyers and sellers who value clarity, privacy, and real experience.</p>
+  <div class="hero-inner">
+    <h1>This space is built for people who move with intention.</h1>
+    <p>Families who know what matters. Buyers and sellers who value privacy and real experience.</p>
+  </div>
 </header>
 
-<main>
-  <section class="blog-preview">
+<section class="section">
+  <div class="wrapper">
     <h2>It Starts Here</h2>
-    {% assign post = site.posts.first %}
-    {% if post %}
-      <div class="blog-excerpt">
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-        <p>{{ post.excerpt | strip_html | truncatewords: 32 }}</p>
-        <a class="read-more" href="{{ post.url | relative_url }}">Read More</a>
-      </div>
-    {% else %}
-      <p>No blog posts found. Stay tuned for updates.</p>
-    {% endif %}
-  </section>
+    <p>Your first look inside the process and mindset behind my work.</p>
+    <p><a class="btn" href="/blog/">Read more</a></p>
+  </div>
+</section>
 
-  <section class="how-i-work-preview">
+<section class="section">
+  <div class="wrapper">
     <h2>How I Work</h2>
     <p>This isn’t about sales. It’s about alignment.</p>
-    <ul>
-      <li>The process is steady, not rushed.</li>
-      <li>Decisions are made with confidence, not noise.</li>
-      <li>Your time, energy, and long-term vision are protected at every step.</li>
-    </ul>
-  </section>
-</main>
+    <p>The process is steady, not rushed.<br>
+    Decisions are made with confidence, not noise.<br>
+    Your time, energy, and long-term vision are protected at every step.</p>
+  </div>
+</section>
 
-<footer>
-  <p>&copy; {{ "now" | date: "%Y" }} Greater Vancouver Homes. All rights reserved.</p>
-</footer>
+<section class="section">
+  <div class="wrapper">
+    <h2>For Sellers</h2>
+    <p>The right sale feels measured and unhurried. We set the frame, control access, and keep attention focused where it matters. No crowds. No noise. Just a clear path from preparation to the handover.</p>
+    <p><a class="btn" href="/contact.html">Start a private conversation</a></p>
+  </div>
+</section>
