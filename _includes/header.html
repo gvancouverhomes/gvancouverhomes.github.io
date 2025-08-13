@@ -1,9 +1,22 @@
-<nav class="nav wrapper">
-  <a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a>
-  <a href="/about.html" {% if page.url == "/about.html" %}class="active"{% endif %}>About</a>
-  <a href="/blog/" {% if page.url contains "/blog/" %}class="active"{% endif %}>Blog</a>
-  <a href="/contact.html" {% if page.url == "/contact.html" %}class="active"{% endif %}>Contact</a>
-  <a href="/search-bridge.html" {% if page.url == "/search-bridge.html" %}class="active"{% endif %}>Search Bridge</a>
-  <a href="/privacy.html" {% if page.url == "/privacy.html" %}class="active"{% endif %}>Privacy</a>
-  <a href="/terms.html" {% if page.url == "/terms.html" %}class="active"{% endif %}>Terms</a>
-</nav>
+<header class="site-header">
+  <div class="container">
+    <div class="logo">
+      <a href="/" title="Greater Vancouver Homes">Greater Vancouver Homes</a>
+    </div>
+    <nav class="site-nav">
+      <ul>
+        <li class="{% if page.url == '/' %}active{% endif %}"><a href="/">Home</a></li>
+        <li class="{% if page.url == '/about/' %}active{% endif %}"><a href="/about/">About</a></li>
+        <li class="{% if page.url == '/blog/' or page.url contains '/blog/' %}active{% endif %}"><a href="/blog/">Blog</a></li>
+        <li class="{% if page.url == '/contact/' %}active{% endif %}"><a href="/contact/">Contact</a></li>
+        <li class="{% if page.url == '/search-bridge/' %}active{% endif %}"><a href="/search-bridge/">Search Bridge</a></li>
+        <li class="{% if page.url == '/privacy/' %}active{% endif %}"><a href="/privacy/">Privacy</a></li>
+        <li class="{% if page.url == '/terms/' %}active{% endif %}"><a href="/terms/">Terms</a></li>
+        <li class="{% if page.url == '/accessibility/' %}active{% endif %}"><a href="/accessibility/">Accessibility</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-nav-toggle" onclick="document.querySelector('.site-nav ul').classList.toggle('open');">
+      ☰
+    </div>
+  </div>
+</header>
