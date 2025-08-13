@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <title>{% if page.title %}{{ page.title }} | {% endif %}Greater Vancouver Homes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,26 +10,32 @@
   {% endif %}
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
-  <!-- Optional .ico fallback if you have it -->
-  <!-- <link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | relative_url }}"> -->
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
 
-  <!-- Social preview (safe defaults, can tune later) -->
-  <meta property="og:title" content="{{ page.title | escape }}">
-  <meta property="og:description" content="{{ page.description | escape }}">
-  <meta property="og:image" content="{{ '/assets/images/hero.png' | absolute_url }}">
-  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <!-- Open Graph -->
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}Greater Vancouver Homes">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}Real estate insights and properties in Greater Vancouver, tailored for discerning buyers and sellers.{% endif %}">
+  <meta property="og:image" content="https://gvancouverhomes.com/assets/images/hero.png">
+  <meta property="og:url" content="https://gvancouverhomes.com{{ page.url }}">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@gvancouverhomes">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}Greater Vancouver Homes">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}Real estate insights and properties in Greater Vancouver, tailored for discerning buyers and sellers.{% endif %}">
+  <meta name="twitter:image" content="https://gvancouverhomes.com/assets/images/hero.png">
 </head>
 <body>
   {% include header.html %}
-  <main id="content">
+
+  <main class="site-content">
     {{ content }}
   </main>
+
   {% include footer.html %}
 </body>
 </html>
-
