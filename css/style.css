@@ -110,3 +110,51 @@ footer {
   .nav a { font-size: 14px; }
   .section { padding: 40px 0; }
 }
+/* === About page typography and flow === */
+.about .container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+.about h1 {
+  font-size: clamp(2rem, 2.6vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: 0.2px;
+  margin: 0 0 1.25rem;
+}
+
+.about h2 {
+  font-size: clamp(1.25rem, 1.6vw, 1.5rem);
+  line-height: 1.25;
+  margin: 2.25rem 0 0.75rem;
+  font-weight: 600;
+  text-rendering: optimizeLegibility;
+}
+
+.about p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #242424;
+  margin: 0 0 1rem;
+  text-wrap: pretty;
+}
+
+/* Subtle section separation without heavy lines */
+.about h2 + p {
+  margin-top: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .about p {
+    font-size: 1.0625rem;
+  }
+  .about h2 {
+    margin-top: 2.5rem;
+  }
+}
+
+/* Optional: tighter top spacing when About is the first section on page */
+section.about:first-of-type {
+  padding-top: 1rem;
+}
