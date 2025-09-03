@@ -6,15 +6,7 @@ description: Learn about Tanvir Bhupal, Greater Vancouver REALTOR® with eXp Rea
 image: /assets/images/tanvir-bhupal-family-greater-vancouver.jpg
 ---
 
-<!-- Page-scoped styles so About looks centered and polished right away -->
-<style>
-  .about-page { max-width: 800px; margin: 0 auto; text-align: center; }
-  .about-page img { max-width: 650px; height: auto; margin: 1.25rem auto; display: block; border-radius: 16px; box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
-  .about-page h1, .about-page h2, .about-page h3 { text-align: center; margin-top: 2rem; margin-bottom: 1rem; }
-  .about-caption { font-size: 0.95rem; color: #555; margin-top: 0.5rem; }
-</style>
-
-<div class="about-page">
+<div class="page-content">
 
 # About Greater Vancouver Homes
 
@@ -30,7 +22,7 @@ Becoming a father sharpened my focus on what matters. That clarity guides every 
   sizes="(max-width: 800px) 100vw, 650px"
   alt="Tanvir Bhupal with his family at the beach in Greater Vancouver, the inspiration behind his real estate approach."
 >
-<p class="about-caption">Every result I deliver begins here, rooted in what matters most.</p>
+<p class="caption">Every result I deliver begins here, rooted in what matters most.</p>
 
 ## How I Work
 I work with people who value a steady, deliberate process. My role is to listen first, plan with precision, and manage each stage so you can move forward with certainty. At this level, real estate is best handled with quiet confidence and exacting attention to detail.
