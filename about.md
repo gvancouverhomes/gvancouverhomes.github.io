@@ -6,8 +6,6 @@ description: Learn about Tanvir Bhupal, Greater Vancouver REALTOR® with eXp Rea
 image: /assets/images/tanvir-bhupal-family-greater-vancouver.jpg
 ---
 
-<div class="page-content">
-
 # About Greater Vancouver Homes
 
 ## Why I Do This Work
@@ -15,14 +13,9 @@ I have been licensed since 2011, guiding clients through complex and meaningful 
 
 Becoming a father sharpened my focus on what matters. That clarity guides every decision I make for my clients.
 
-<img 
-  src="/assets/images/tanvir-bhupal-family-greater-vancouver-800.jpg" 
-  srcset="/assets/images/tanvir-bhupal-family-greater-vancouver-800.jpg 800w, 
-          /assets/images/tanvir-bhupal-family-greater-vancouver.jpg 1600w"
-  sizes="(max-width: 800px) 100vw, 650px"
-  alt="Tanvir Bhupal with his family at the beach in Greater Vancouver, the inspiration behind his real estate approach."
->
-<p class="caption">Every result I deliver begins here, rooted in what matters most.</p>
+![Every result I deliver begins here, rooted in what matters most.](/assets/images/tanvir-bhupal-family-greater-vancouver-800.jpg)
+
+*Every result I deliver begins here, rooted in what matters most.*
 
 ## How I Work
 I work with people who value a steady, deliberate process. My role is to listen first, plan with precision, and manage each stage so you can move forward with certainty. At this level, real estate is best handled with quiet confidence and exacting attention to detail.
@@ -78,24 +71,4 @@ We keep communications tight, exposure selective, and information shared strictl
 ---
 
 *Tanvir Bhupal, REALTOR® at eXp Realty*  
-*Greater Vancouver Homes*  
-
-</div>
-
-<!-- Local Business schema for SEO -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "RealEstateAgent",
-  "name": "Greater Vancouver Homes by Tanvir Bhupal",
-  "image": "https://gvancouverhomes.com/assets/images/tanvir-bhupal-family-greater-vancouver.jpg",
-  "areaServed": ["Surrey", "Fleetwood", "Greater Vancouver", "Fraser Valley", "Langley", "Vancouver"],
-  "url": "https://gvancouverhomes.com/about/",
-  "brand": "eXp Realty",
-  "sameAs": [
-    "https://www.youtube.com/@gvancouverhomes",
-    "https://www.instagram.com/gvancouverhomes",
-    "https://www.linkedin.com/in/gvancouverhomes"
-  ]
-}
-</script>
+*Greater Vancouver Homes*
