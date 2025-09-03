@@ -24,7 +24,7 @@ Becoming a father sharpened my focus on what matters. That clarity guides every 
     style="max-width:100%;height:auto;border-radius:16px;"
   >
 </p>
-<p style="text-align:center; font-size:0.95rem; color:#555;">My family — the reason I do this work.</p>
+<p style="text-align:center; font-size:0.95rem; color:#555;">Every result I deliver begins here, rooted in what matters most.</p>
 
 ## How I Work
 I work with people who value a steady, deliberate process. My role is to listen first, plan with precision, and manage each stage so you can move forward with certainty. At this level, real estate is best handled with quiet confidence and exacting attention to detail.
@@ -99,3 +99,4 @@ We keep communications tight, exposure selective, and information shared strictl
   ]
 }
 </script>
+
