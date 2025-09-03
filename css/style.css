@@ -332,3 +332,44 @@ section.about:first-of-type { padding-top: 1rem; }
     margin-right: auto !important;
   }
 }
+/* ===== Page Content Styling ===== */
+.page-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #222;
+}
+
+.page-content h1,
+.page-content h2,
+.page-content h3 {
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.page-content p,
+.page-content li {
+  text-align: left;
+  margin-bottom: 1.25rem;
+}
+
+.page-content img {
+  max-width: 650px;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.page-content .caption {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: -0.75rem;
+  margin-bottom: 2rem;
+}
