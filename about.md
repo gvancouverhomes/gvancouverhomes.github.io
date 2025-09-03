@@ -6,6 +6,16 @@ description: Learn about Tanvir Bhupal, Greater Vancouver REALTOR® with eXp Rea
 image: /assets/images/tanvir-bhupal-family-greater-vancouver.jpg
 ---
 
+<!-- Page-scoped styles so About looks centered and polished right away -->
+<style>
+  .about-page { max-width: 800px; margin: 0 auto; text-align: center; }
+  .about-page img { max-width: 650px; height: auto; margin: 1.25rem auto; display: block; border-radius: 16px; box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
+  .about-page h1, .about-page h2, .about-page h3 { text-align: center; margin-top: 2rem; margin-bottom: 1rem; }
+  .about-caption { font-size: 0.95rem; color: #555; margin-top: 0.5rem; }
+</style>
+
+<div class="about-page">
+
 # About Greater Vancouver Homes
 
 ## Why I Do This Work
@@ -13,18 +23,14 @@ I have been licensed since 2011, guiding clients through complex and meaningful 
 
 Becoming a father sharpened my focus on what matters. That clarity guides every decision I make for my clients.
 
-<!-- Family photo with responsive srcset -->
-<p style="text-align:center; margin: 1.25rem 0;">
-  <img 
-    src="/assets/images/tanvir-bhupal-family-greater-vancouver-800.jpg" 
-    srcset="/assets/images/tanvir-bhupal-family-greater-vancouver-800.jpg 800w, 
-            /assets/images/tanvir-bhupal-family-greater-vancouver.jpg 1600w"
-    sizes="(max-width: 800px) 100vw, 1600px"
-    alt="Tanvir Bhupal with his family at the beach in Greater Vancouver — the inspiration behind his real estate approach."
-    style="max-width:100%;height:auto;border-radius:16px;"
-  >
-</p>
-<p style="text-align:center; font-size:0.95rem; color:#555;">Every result I deliver begins here, rooted in what matters most.</p>
+<img 
+  src="/assets/images/tanvir-bhupal-family-greater-vancouver-800.jpg" 
+  srcset="/assets/images/tanvir-bhupal-family-greater-vancouver-800.jpg 800w, 
+          /assets/images/tanvir-bhupal-family-greater-vancouver.jpg 1600w"
+  sizes="(max-width: 800px) 100vw, 650px"
+  alt="Tanvir Bhupal with his family at the beach in Greater Vancouver, the inspiration behind his real estate approach."
+>
+<p class="about-caption">Every result I deliver begins here, rooted in what matters most.</p>
 
 ## How I Work
 I work with people who value a steady, deliberate process. My role is to listen first, plan with precision, and manage each stage so you can move forward with certainty. At this level, real estate is best handled with quiet confidence and exacting attention to detail.
@@ -58,7 +64,7 @@ I design the sale to protect your privacy while creating genuine demand. Every e
 **Considering a sale?** Start a private conversation on the [Contact](/contact/) page.
 
 ## Areas I Serve
-Surrey (including Fleetwood), South Surrey, White Rock, Langley, Vancouver, and select opportunities across the Fraser Valley and Greater Vancouver.
+Surrey, including Fleetwood, South Surrey, White Rock, Langley, Vancouver, and select opportunities across the Fraser Valley and Greater Vancouver.
 
 ## What This Means for You
 If we work together, you can expect clarity at every step and results that reflect your priorities. You will always know where we are in the process without having to manage it yourself.
@@ -79,8 +85,10 @@ We keep communications tight, exposure selective, and information shared strictl
 
 ---
 
-*Tanvir Bhupal — REALTOR® at eXp Realty*  
+*Tanvir Bhupal, REALTOR® at eXp Realty*  
 *Greater Vancouver Homes*  
+
+</div>
 
 <!-- Local Business schema for SEO -->
 <script type="application/ld+json">
@@ -99,4 +107,3 @@ We keep communications tight, exposure selective, and information shared strictl
   ]
 }
 </script>
-
