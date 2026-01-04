@@ -291,3 +291,23 @@ p { margin: 0 0 1rem; }
     text-align: center !important;
   }
 }
+/* =========================================================
+   HEADER: center nav when logo is removed
+   ========================================================= */
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Keep mobile menu toggle on the right */
+.site-header .mobile-nav-toggle {
+  position: absolute;
+  right: 1.25rem;
+}
+
+/* Nav alignment */
+.site-nav {
+  margin: 0 auto;
+}
