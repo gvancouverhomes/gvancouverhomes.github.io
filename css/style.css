@@ -275,3 +275,19 @@ p { margin: 0 0 1rem; }
   font-size: 0.92rem;
   color: #555;
 }
+/* =========================================================
+   FORCE HOMEPAGE HERO CARD CENTER (wins against overrides)
+   ========================================================= */
+@media (min-width: 769px) {
+  .hero-overlay {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .hero-text {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+}
