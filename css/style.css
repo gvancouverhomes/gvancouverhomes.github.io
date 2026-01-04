@@ -1,5 +1,5 @@
 /* =========================================================
-   Global Reset
+   Base Reset
    ========================================================= */
 
 *,
@@ -52,12 +52,12 @@ ul {
 }
 
 /* =========================================================
-   Header / Navigation
+   Header / Navigation (no logo, centered nav)
    ========================================================= */
 
 .site-header {
-  border-bottom: 1px solid #eee;
   background: #fff;
+  border-bottom: 1px solid #eee;
 }
 
 .site-header .container {
@@ -108,8 +108,14 @@ ul {
 .hero {
   position: relative;
   height: 70vh;
+
+  /* HERO IMAGE — update filename here if needed */
+  background-image: url("/assets/images/hero.png");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+
+  background-color: #111;
 }
 
 .hero-overlay {
@@ -151,4 +157,13 @@ ul {
 
 .intro .container {
   max-width: 760px;
-  text-align: ce
+  text-align: center;
+}
+
+.intro h2 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.intro p {
