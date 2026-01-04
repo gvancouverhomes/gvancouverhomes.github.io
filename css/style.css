@@ -1,4 +1,3 @@
-
 /* =========================================================
    Greater Vancouver Homes — Unified Stylesheet
    Replace /css/style.css with this entire file
@@ -48,7 +47,7 @@ p { margin: 0 0 1rem; }
   justify-content: space-between;
   gap: 1rem;
   padding: 0.75rem 1.25rem;
-  flex-wrap: wrap; /* allows wrapping on narrow widths */
+  flex-wrap: wrap;
 }
 
 /* Logo */
@@ -89,7 +88,7 @@ p { margin: 0 0 1rem; }
   .mobile-nav-toggle { display: block; order: 2; }
   .site-nav { width: 100%; order: 3; }
   .site-nav ul {
-    display: none;                 /* hidden by default */
+    display: none;
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
@@ -103,12 +102,11 @@ p { margin: 0 0 1rem; }
 /* =========================================================
    HERO
    - Background image path: /assets/images/hero.png
-   - Dark overlay plus translucent white text card
-   - Watermark-safe positioning
+   - Desktop now feels like a true banner
    ========================================================= */
 .hero {
   position: relative;
-  min-height: clamp(380px, 58vh, 640px);
+  height: clamp(540px, 82vh, 920px);
   background-image: url('/assets/images/hero.png');
   background-size: cover;
   background-position: center;
@@ -127,12 +125,12 @@ p { margin: 0 0 1rem; }
   position: relative;
   height: 100%;
   display: flex;
-  align-items: flex-end; /* bottom-left on desktop */
+  align-items: flex-end;
   justify-content: flex-start;
   padding: clamp(1rem, 4vw, 2.5rem);
 }
 
-/* Translucent white card behind text (the “white square”) */
+/* Translucent white card behind text */
 .hero-text {
   max-width: min(760px, 92%);
   background: rgba(255, 255, 255, 0.78);
@@ -159,8 +157,10 @@ p { margin: 0 0 1rem; }
   color: #222;
 }
 
-/* Mobile centering for watermark safety */
+/* Mobile centering */
 @media (max-width: 768px) {
+  .hero { height: clamp(380px, 58vh, 640px); }
+
   .hero-overlay {
     align-items: flex-end;
     justify-content: center;
@@ -229,6 +229,34 @@ section.about { padding: 2rem 0; }
   .about h2 { margin-top: 2.5rem; }
 }
 section.about:first-of-type { padding-top: 1rem; }
+
+/* =========================================================
+   ABOUT PAGE BANNER IMAGE (CSS-only)
+   Makes the first image on the About page full-bleed like a banner.
+   ========================================================= */
+section.about img:first-of-type {
+  width: 100vw;
+  max-width: none;
+  height: clamp(420px, 62vh, 860px);
+  object-fit: cover;
+  object-position: center;
+  display: block;
+
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: 0.25rem;
+  margin-bottom: 2rem;
+
+  border-radius: 0;
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  section.about img:first-of-type {
+    height: clamp(320px, 48vh, 520px);
+    margin-top: 0;
+  }
+}
 
 /* =========================================================
    BLOG BASICS (Index and Posts)
@@ -322,8 +350,8 @@ section.about:first-of-type { padding-top: 1rem; }
    ========================================================= */
 @media (min-width: 769px) {
   .hero-overlay {
-    justify-content: center !important;   /* center bubble horizontally */
-    align-items: flex-end !important;     /* keep it toward bottom */
+    justify-content: center !important;
+    align-items: flex-end !important;
   }
 
   .hero-text {
@@ -332,6 +360,7 @@ section.about:first-of-type { padding-top: 1rem; }
     margin-right: auto !important;
   }
 }
+
 /* ===== Page Content Styling ===== */
 .page-content {
   max-width: 800px;
