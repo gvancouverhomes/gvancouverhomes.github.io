@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>{% if page.title %}{{ page.title }} | {% endif %}Greater Vancouver Homes</title>
+
+  <title>{% if page.title %}{{ page.title }} | {% endif %}Tanvir Bhupal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   {% if page.description %}
@@ -10,7 +11,7 @@
   {% endif %}
 
   <!-- Canonical -->
-  <link rel="canonical" href="https://gvancouverhomes.com{{ page.url }}">
+  <link rel="canonical" href="{{ site.url | default: '' }}{{ page.url }}">
 
   <!-- Favicon and app icons -->
   <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
@@ -27,26 +28,25 @@
   <link rel="stylesheet" href="/css/style.css">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}Greater Vancouver Homes">
-  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}Real estate insights and properties in Greater Vancouver, tailored for discerning buyers and sellers.{% endif %}">
-  <meta property="og:image" content="https://gvancouverhomes.com/assets/images/hero.png">
-  <meta property="og:url" content="https://gvancouverhomes.com{{ page.url }}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}Tanvir Bhupal">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}Real estate guidance for Greater Vancouver, shaped by calm strategy and real experience.{% endif %}">
+  <meta property="og:image" content="{{ site.url | default: '' }}/assets/images/hero.png">
+  <meta property="og:url" content="{{ site.url | default: '' }}{{ page.url }}">
   <meta property="og:type" content="website">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@gvancouverhomes">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}Greater Vancouver Homes">
-  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}Real estate insights and properties in Greater Vancouver, tailored for discerning buyers and sellers.{% endif %}">
-  <meta name="twitter:image" content="https://gvancouverhomes.com/assets/images/hero.png">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}Tanvir Bhupal">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}Real estate guidance for Greater Vancouver, shaped by calm strategy and real experience.{% endif %}">
+  <meta name="twitter:image" content="{{ site.url | default: '' }}/assets/images/hero.png">
 </head>
 <body>
   {% include header.html %}
 
   <main class="page-content">
-  {{ content }}
-</main>
-
+    {{ content }}
+  </main>
 
   {% include footer.html %}
 </body>
