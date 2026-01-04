@@ -265,25 +265,36 @@ section.about { padding: 2rem 0; }
 section.about:first-of-type { padding-top: 1rem; }
 
 /* =========================================================
-   ABOUT PAGE BANNER IMAGE (CSS-only)
-   Makes the first image on the About page full-bleed like a banner.
-   ========================================================= */
+ /* About page — calm, editorial banner (not a hero) */
 section.about img:first-of-type {
   width: 100vw;
   max-width: none;
-  height: clamp(420px, 62vh, 860px);
+
+  height: 34vh;
+  min-height: 260px;
+  max-height: 380px;
+
   object-fit: cover;
   object-position: center;
   display: block;
 
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
   margin-bottom: 2rem;
 
   border-radius: 0;
   box-shadow: none;
 }
+
+/* Mobile tuning */
+@media (max-width: 768px) {
+  section.about img:first-of-type {
+    height: 26vh;
+    min-height: 200px;
+  }
+}
+
 
 @media (max-width: 768px) {
   section.about img:first-of-type {
