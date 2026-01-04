@@ -402,3 +402,25 @@ section.about img:first-of-type {
   margin-top: -0.75rem;
   margin-bottom: 2rem;
 }
+/* =========================================================
+   FULL-BLEED FIX (edge-to-edge)
+   If a hero/banner is sitting inside a .container, this forces
+   it to break out and touch both edges of the screen.
+   ========================================================= */
+
+/* Homepage hero full-bleed, even if wrapped by a container */
+.hero {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+/* About page banner full-bleed (first image only) */
+section.about img:first-of-type,
+.page-content img:first-of-type {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  border-radius: 0;
+}
