@@ -100,75 +100,109 @@ p { margin: 0 0 1rem; }
 }
 
 /* =========================================================
-   HERO
-   - Background image path: /assets/images/hero.png
-   - Desktop now feels like a true banner
+   HERO — Final, Balanced, Editorial Version
+   Controls:
+   - Image size (desktop + mobile)
+   - Edge-to-edge width
+   - Text card positioning
    ========================================================= */
+
 .hero {
   position: relative;
-  height: clamp(540px, 82vh, 920px);
+
+  /* Image geometry */
+  width: 100vw;
+  height: 50vh;
+  min-height: 420px;
+  max-height: 620px;
+
   background-image: url('/assets/images/hero.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  /* Break out of container */
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
-/* Global dark overlay for overall contrast */
+/* Dark overlay for contrast */
 .hero::before {
   content: "";
-  position: absolute; inset: 0;
-  background: linear-gradient(to bottom right, rgba(0,0,0,0.35), rgba(0,0,0,0.25));
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom right,
+    rgba(0,0,0,0.30),
+    rgba(0,0,0,0.22)
+  );
 }
 
-/* Text group with safe margins */
+/* Wrapper that positions the text card */
 .hero-overlay {
   position: relative;
   height: 100%;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  padding: clamp(1rem, 4vw, 2.5rem);
+
+  /* Vertical placement of the card */
+  align-items: center;
+
+  /* Slightly grounded, not dead-center */
+  padding-bottom: clamp(2rem, 6vh, 4.5rem);
+  padding-left: clamp(1rem, 4vw, 2.5rem);
+  padding-right: clamp(1rem, 4vw, 2.5rem);
 }
 
-/* Translucent white card behind text */
+/* Text card itself */
 .hero-text {
   max-width: min(760px, 92%);
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.80);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
+
   color: #111;
-  padding: clamp(1rem, 3vw, 1.5rem) clamp(1rem, 3vw, 1.75rem);
+  padding: clamp(1rem, 3vw, 1.5rem) clamp(1.1rem, 3vw, 1.75rem);
   border-radius: 12px;
+
   box-shadow: 0 10px 24px rgba(0,0,0,0.10);
 }
 
-/* Headline and subhead */
+/* Headline */
 .hero-text h1 {
   margin: 0 0 0.5rem;
-  font-size: clamp(1.75rem, 4.2vw, 2.75rem);
+  font-size: clamp(1.75rem, 4vw, 2.6rem);
   line-height: 1.15;
   letter-spacing: 0.2px;
 }
 
+/* Subtext */
 .hero-text p {
   margin: 0;
-  font-size: clamp(0.95rem, 1.7vw, 1.0625rem);
+  font-size: clamp(0.95rem, 1.7vw, 1.05rem);
   line-height: 1.7;
   color: #222;
 }
 
-/* Mobile centering */
+/* =========================================================
+   MOBILE TUNING
+   ========================================================= */
 @media (max-width: 768px) {
-  .hero { height: clamp(380px, 58vh, 640px); }
+  .hero {
+    height: 42vh;
+    min-height: 320px;
+  }
 
   .hero-overlay {
     align-items: flex-end;
     justify-content: center;
+    padding-bottom: 1.75rem;
   }
+
   .hero-text {
     text-align: center;
   }
 }
+
 
 /* =========================================================
    HOMEPAGE — Intro Section
