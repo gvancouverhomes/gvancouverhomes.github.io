@@ -291,7 +291,9 @@ p { margin: 0 0 1rem; }
     text-align: center !important;
   }
 }
-/* HEADER: center nav when logo is removed (force) */
+/* =========================================================
+   HEADER: center nav when logo is removed (force)
+   ========================================================= */
 .site-header .container{
   position: relative !important;
   display: flex !important;
@@ -299,10 +301,18 @@ p { margin: 0 0 1rem; }
   justify-content: center !important;
 }
 
+/* Stop nav from stretching full width */
 .site-header .site-nav{
+  flex: 0 1 auto !important;
   margin: 0 auto !important;
 }
 
+/* Center the actual menu items */
+.site-header .site-nav ul{
+  justify-content: center !important;
+}
+
+/* Keep mobile toggle on the right */
 .site-header .mobile-nav-toggle{
   position: absolute !important;
   right: 1.25rem !important;
