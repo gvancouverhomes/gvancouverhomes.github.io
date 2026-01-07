@@ -17,17 +17,42 @@ description: Helping families move with clarity and confidence.
 </section>
 
 <section class="intro">
-  <div class="container">
-    <h2>It Starts Here</h2>
-    <p>This isn’t about sales. It’s about alignment.</p>
-    <p>The process is steady, not rushed.</p>
-    <p>Decisions are made with confidence, not noise.</p>
-    <p>Your time, energy, and long-term vision are protected at every step.</p>
+  <div class="container intro-wrap">
+    <div class="intro-left">
+      <h2>It Starts Here</h2>
 
-    {% if site.posts.size > 0 %}
-      <a class="read-more" href="{{ site.posts.first.url }}">Read More</a>
-    {% else %}
-      <a class="read-more" href="/blog/">Read More</a>
-    {% endif %}
+      <p class="statement">
+        This isn’t about sales. It’s about alignment.<br>
+        The process is steady, not rushed.<br>
+        Decisions are made with confidence, not noise.<br>
+        Your time, energy, and long-term vision are protected at every step.
+      </p>
+
+      <a class="read-more" href="/blog/">View all writing</a>
+    </div>
+
+    <div class="intro-right">
+      <h3 class="latest-title">Latest writing</h3>
+
+      {% if site.posts.size > 0 %}
+        <div class="latest-grid">
+          {% for post in site.posts limit:6 %}
+            <a class="post-card" href="{{ post.url }}">
+              <div class="post-card-inner">
+                <div class="post-title">{{ post.title }}</div>
+                {% if post.description %}
+                  <div class="post-desc">{{ post.description }}</div>
+                {% endif %}
+                <div class="post-meta">
+                  {{ post.date | date: "%b %e, %Y" }}
+                </div>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="no-posts">No posts yet. The first one is coming soon.</p>
+      {% endif %}
+    </div>
   </div>
 </section>
