@@ -28,7 +28,7 @@ description: Helping families move with clarity and confidence.
         Your time, energy, and long-term vision are protected at every step.
       </p>
 
-      <a class="read-more" href="/blog/">View all writing</a>
+      <a class="read-more" href="/blog/">Insights</a>
     </div>
 
     <div class="intro-right">
