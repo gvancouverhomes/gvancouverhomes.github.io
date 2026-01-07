@@ -319,3 +319,83 @@ p { margin: 0 0 1rem; }
   top: 50% !important;
   transform: translateY(-50%) !important;
 }
+/* ==============================
+   HOMEPAGE INTRO + LATEST POSTS
+   ============================== */
+
+.intro {
+  padding: 3.5rem 0;
+  background: #f7f7f7;
+}
+
+.intro-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.statement {
+  margin: 0 0 1.25rem;
+  line-height: 1.7;
+  max-width: 52ch;
+  font-size: 1.05rem;
+  color: #111;
+}
+
+.latest-title {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: rgba(17, 17, 17, 0.8);
+}
+
+.latest-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+}
+
+.post-card {
+  display: block;
+  background: #fff;
+  border: 1px solid rgba(17, 17, 17, 0.10);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.post-card:hover {
+  border-color: rgba(17, 17, 17, 0.22);
+}
+
+.post-title {
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 0.35rem;
+}
+
+.post-desc {
+  color: rgba(17, 17, 17, 0.75);
+  line-height: 1.55;
+  margin-bottom: 0.5rem;
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: rgba(17, 17, 17, 0.55);
+}
+
+@media (min-width: 900px) {
+  .intro {
+    padding: 4.5rem 0;
+  }
+
+  .intro-wrap {
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .latest-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
