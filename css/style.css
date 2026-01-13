@@ -173,15 +173,15 @@ p { margin: 0 0 1rem; }
   .hero-text { text-align: center; }
 }
 
-/* =========================================================
-   HOMEPAGE — Intro
-   ========================================================= */
+/* ==============================
+   HOMEPAGE INTRO + LATEST POSTS
+   ============================== */
+
 .intro {
-  padding: 2.5rem 0 2.75rem;
+  padding: 3.5rem 0;
+  background: #f7f7f7;
 }
 
-.intro h2 { margin-bottom: 0.75rem; }
-.intro p { line-height: 1.8; color: #242424; }
 
 .read-more {
   display: inline-block;
