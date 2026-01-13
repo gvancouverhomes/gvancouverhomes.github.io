@@ -2,73 +2,54 @@
 layout: default
 title: About
 permalink: /about/
-description: Learn about Tanvir Bhupal, Greater Vancouver REALTOR® with eXp Realty. Specializing in luxury homes, discreet relocations, and high-value property sales across Surrey, Fleetwood, and Greater Vancouver.
+description: Learn about Tanvir Bhupal, a REALTOR® based in Surrey, BC, known for a steady, deliberate approach to buying, selling, and relocation across Greater Vancouver.
+
 image: /assets/images/tanvir-bhupal-family-greater-vancouver.jpg
 ---
-
-# About Greater Vancouver Homes
+# About Tanvir Bhupal
 
 ## Why I Do This Work
-I have been licensed since 2011, guiding clients through complex and meaningful transactions. From first-time purchases to legacy properties, each requires a tailored approach and precise execution.
+I have been licensed since 2011, working with people through decisions that carry real weight. From first homes to long held properties, each situation requires judgment, patience, and careful execution.
 
-Becoming a father sharpened my focus on what matters. That clarity guides every decision I make for my clients.
+Over time, my focus has narrowed to what matters most: protecting time, reducing complexity, and creating outcomes people can feel confident living with long after the transaction is complete.
 
-![Every result I deliver begins here, rooted in what matters most.](/assets/images/tanvir-bhupal-family-greater-vancouver-800.jpg)
-
-*Every result I deliver begins here, rooted in what matters most.*
+![Tanvir Bhupal with his family](/assets/images/tanvir-bhupal-family-greater-vancouver-800.jpg)
 
 ## How I Work
-I work with people who value a steady, deliberate process. My role is to listen first, plan with precision, and manage each stage so you can move forward with certainty. At this level, real estate is best handled with quiet confidence and exacting attention to detail.
+I work best with people who value a steady, deliberate process. My role is to listen closely, think ahead, and manage each stage with precision so decisions feel clear rather than rushed.
+
+Real estate at this level is less about activity and more about judgment.  
+Most outcomes are shaped long before anything is signed. My role is to slow things down early, where clarity prevents problems later and small details tend to matter most.
+
+Every step is intentional. Communication stays tight. Noise is avoided.
 
 **What you can expect**
-- Clear strategy before we act  
-- Sophisticated pricing and positioning  
+- Clear strategy before action  
+- Thoughtful pricing and positioning  
 - Discreet communication and protected privacy  
-- Tight execution, no unnecessary noise
+- Tight execution without unnecessary pressure  
 
 ## For Buyers
-Whether you are relocating to Greater Vancouver or moving within it, I help you secure the right property with efficiency and discretion. From private opportunities to the best of the market, I present options matched to you, including off-market properties.
+Some clients come to me while relocating. Others are making a move closer to home. In both cases, the objective is the same: identify the right opportunity without wasted motion or unnecessary exposure.
 
-**Buyer focus**
-- Luxury homes in Surrey and Fleetwood  
-- Executive and family properties across Greater Vancouver  
-- Discreet relocation support for high-net-worth families
-
-**Next step:** explore recent insights on the [Blog](/blog/) or reach out on the [Contact](/contact/) page.
+Alignment comes first, followed by execution. When appropriate, this includes a combination of private opportunities and carefully selected listings from the open market.
 
 ## For Sellers
-Selling a high-value property is about control. Success is determined by the right audience, timing, and positioning.
+Selling well is largely about control. Timing, positioning, and audience matter more than volume.
 
-I design the sale to protect your privacy while creating genuine demand. Every element is deliberate: pricing, presentation, timing. Exposure is selective so your home attracts qualified buyers and serious offers.
+My approach is designed to protect privacy while creating genuine demand. Exposure is measured. Pricing is deliberate. Every decision serves the long term outcome rather than short term attention.
 
-**Seller specialties**
-- Strategic pricing and presentation tailored to your asset  
-- Exclusive marketing to verified buyers and networks  
-- Privacy-first process with measured, high-intent exposure
-
-**Considering a sale?** Start a private conversation on the [Contact](/contact/) page.
-
-## Areas I Serve
-Surrey, including Fleetwood, South Surrey, White Rock, Langley, Vancouver, and select opportunities across the Fraser Valley and Greater Vancouver.
+## Areas of Focus
+My work is centered in **Surrey, BC**, with select opportunities across **Greater Vancouver** and the **Fraser Valley**.
 
 ## What This Means for You
-If we work together, you can expect clarity at every step and results that reflect your priorities. You will always know where we are in the process without having to manage it yourself.
+If we work together, you can expect clarity throughout the process and decisions made with intention rather than urgency. You will always know where things stand without having to manage the details yourself.
 
-Whether you are buying or selling, my role is to protect your time, your privacy, and your outcome.
+My role is simple: protect your time, your privacy, and the quality of the outcome.
 
----
-
-### Questions I’m Often Asked
-**Do you work with relocations to Greater Vancouver?**  
-Yes. I coordinate discreet tours, private showings, and trusted local services so your move is efficient and well-managed.
-
-**Can you access off-market opportunities?**  
-Yes. When appropriate, I source private options through vetted relationships and direct outreach.
-
-**How do you handle privacy?**  
-We keep communications tight, exposure selective, and information shared strictly on a need-to-know basis.
 
 ---
 
 *Tanvir Bhupal, REALTOR® at eXp Realty*  
 *Greater Vancouver Homes*
+
