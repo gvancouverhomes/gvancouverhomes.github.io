@@ -45,11 +45,12 @@ My work is centered in **Surrey, BC**, with select opportunities across **Greate
 ## What This Means for You
 If we work together, you can expect clarity throughout the process and decisions made with intention rather than urgency. You will always know where things stand without having to manage the details yourself.
 
-My role is simple: protect your time, your privacy, and the quality of the outcome.
+My role is simple: protect your time, your privacy, and the quality of the outcome. 
 
 
 ---
 
 *Tanvir Bhupal, REALTOR® at eXp Realty*  
 *Greater Vancouver Homes*
+
 
