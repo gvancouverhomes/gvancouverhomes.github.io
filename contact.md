@@ -52,6 +52,50 @@ If I’m with a client or unavailable, leave a message or share your details bel
 Use the form below if that feels more comfortable. I’ll review what you share and follow up with a call.
 
 A sentence or two about where you’re at is enough.
+<form action="https://formspree.io/f/XXXXXXX" method="POST">
+
+  <p>
+    <label>
+      Name<br>
+      <input type="text" name="name" required>
+    </label>
+  </p>
+
+  <p>
+    <label>
+      Email<br>
+      <input type="email" name="email" required>
+    </label>
+  </p>
+
+  <p>
+    <label>
+      Phone<br>
+      <input type="tel" name="phone" required pattern="[0-9+\-\s()]{7,}">
+    </label>
+  </p>
+
+  <p>
+    <label>
+      Message<br>
+      <textarea name="message" rows="5" required></textarea>
+    </label>
+  </p>
+
+  <!-- Spam protection -->
+  <input type="text" name="_gotcha" style="display:none">
+
+  <!-- Email subject -->
+  <input type="hidden" name="_subject" value="New website inquiry">
+
+  <p>
+    <button type="submit">Send</button>
+  </p>
+
+</form>
+
+<p><small>Your details are kept private.</small></p>
+
 
 
 
