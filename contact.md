@@ -20,6 +20,7 @@ Most people who contact me are either ready to move forward, or very close. The 
 - Your decision to buy or sell is already made, or very close
 - You value a steady, deliberate approach
 
+
 ---
 
 ## Request a call back
