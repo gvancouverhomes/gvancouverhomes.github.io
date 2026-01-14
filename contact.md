@@ -12,9 +12,6 @@ Every move starts with a conversation. If you’re considering a buy, sale, or p
 **Call or text:** [604-897-7826](tel:+16048977826)  
 **Email:** [tanvir@tanvirbhupal.com](mailto:tanvir@tanvirbhupal.com)
 
-
-## Contact
-
 If you’re reaching out, it’s likely because you’ve already done your homework.
 
 Most people who contact me are either ready to move forward, or very close. The purpose of the first conversation is clarity around where you’re headed, what matters, and whether working together makes sense.
