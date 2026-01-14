@@ -24,20 +24,9 @@ These conversations tend to be most useful when the direction is already clear, 
 
 ---
 
-## Call directly
+## Request a call back
 
-If you’re ready to move forward, the simplest next step is to call.
-
-**Phone:** 604-897-7826  
-**Email:** tanvir@tanvirbhupal.com
-
-If I’m with a client or unavailable, leave a message or share your details below. I personally return every call.
-
----
-
-## If you prefer to leave details
-
-Use the form below if that feels more comfortable. I’ll review what you share and follow up with a call.
+Leave your details below and I’ll return your call when available.
 
 A sentence or two about where you’re at is enough.
 <form action="https://formspree.io/f/XXXXXXX" method="POST">
