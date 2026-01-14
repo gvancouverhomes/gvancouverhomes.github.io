@@ -7,25 +7,17 @@ permalink: /contact/
 
 # Let’s talk about your next move
 
-Every move starts with a conversation. Whether you are ready to buy, sell, or just want to explore options, reach out and I will get back to you as soon as I can.
+Every move starts with a conversation. If you’re considering a buy, sale, or private search, this is the place to begin.
 
 **Call or text:** [604-897-7826](tel:+16048977826)  
 **Email:** [tanvir@tanvirbhupal.com](mailto:tanvir@tanvirbhupal.com)
 
----
----
-layout: default
-title: Contact
-permalink: /contact/
----
 
 ## Contact
 
 If you’re reaching out, it’s likely because you’ve already done your homework.
 
-Most people who contact me are either ready to move forward, or very close and looking to clear up a few final questions about the process before they do. In both cases, the purpose of the first conversation is the same: clarity.
-
-This is a focused conversation to understand where you’re headed, what matters to you, and whether working together makes sense.
+Most people who contact me are either ready to move forward, or very close. The purpose of the first conversation is clarity around where you’re headed, what matters, and whether working together makes sense.
 
 **This conversation is a good fit if:**
 - Your decision to buy or sell is already made, or nearly made  
