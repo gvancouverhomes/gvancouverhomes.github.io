@@ -10,29 +10,49 @@ permalink: /contact/
 Every move starts with a conversation. Whether you are ready to buy, sell, or just want to explore options, reach out and I will get back to you as soon as I can.
 
 **Call or text:** [604-897-7826](tel:+16048977826)  
-**Email:** [tanvir@gvancouverhomes.com](mailto:tanvir@gvancouverhomes.com)
+**Email:** [tanvir@tanvirbhupal.com](mailto:tanvir@tanvirbhupal.com)
+
+---
+---
+layout: default
+title: Contact
+permalink: /contact/
+---
+
+## Contact
+
+If you’re reaching out, it’s likely because you’ve already done your homework.
+
+Most people who contact me are either ready to move forward, or very close and looking to clear up a few final questions about the process before they do. In both cases, the purpose of the first conversation is the same: clarity.
+
+This is a focused conversation to understand where you’re headed, what matters to you, and whether working together makes sense.
+
+**This conversation is a good fit if:**
+- Your decision to buy or sell is already made, or nearly made  
+- You value a steady, deliberate approach  
+- You’re clear on what you want and ready to move forward, with the expectation that it’s handled properly  
+
+These conversations tend to be most useful when the direction is already clear, or very close.
 
 ---
 
-## Send a message
+## Call directly
 
-<form action="YOUR_FORMSPREE_URL_HERE" method="POST">
-  <label for="name">Name</label><br>
-  <input type="text" id="name" name="name" required><br><br>
+If you’re ready to move forward, the simplest next step is to call.
 
-  <label for="contact">Email or Phone</label><br>
-  <input type="text" id="contact" name="contact" required><br><br>
+**Phone:** 604-897-7826  
+**Email:** tanvir@tanvirbhupal.com
 
-  <label for="message">How I can help</label><br>
-  <textarea id="message" name="message" rows="4"></textarea><br><br>
+If I’m with a client or unavailable, leave a message or share your details below. I personally return every call.
 
-  <!-- Optional: redirect to a thank-you page after submit -->
-  <!-- <input type="hidden" name="_redirect" value="https://gvancouverhomes.com/thanks"> -->
+---
 
-  <!-- Tag submissions from this page -->
-  <input type="hidden" name="form-name" value="Website Contact">
+## If you prefer to leave details
 
-  <button type="submit">Send to Tanvir</button>
-</form>
+Use the form below if that feels more comfortable. I’ll review what you share and follow up with a call.
 
-<p><small>Your information stays with me. No spam, ever.</small></p>
+A sentence or two about where you’re at is enough.
+
+
+
+
