@@ -17,10 +17,8 @@ If you’re reaching out, it’s likely because you’ve already done your homew
 Most people who contact me are either ready to move forward, or very close. The purpose of the first conversation is clarity around where you’re headed, what matters, and whether working together makes sense.
 
 **This conversation is a good fit if:**
-• Your decision to buy or sell is already made, or very close
-• You value a steady, deliberate approach
-
-These conversations tend to be most useful when the direction is already clear, or very close.
+- Your decision to buy or sell is already made, or very close
+- You value a steady, deliberate approach
 
 ---
 
