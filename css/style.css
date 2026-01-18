@@ -405,3 +405,18 @@ p { margin: 0 0 1rem; }
     max-width: 1280px;
   }
 }
+/* Search page primary action */
+.page-content a[href*="exprealty.com"] {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.85rem 1.4rem;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.page-content a[href*="exprealty.com"]:hover {
+  background: #000;
+}
