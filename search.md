@@ -35,11 +35,11 @@ permalink: /search/
   </div>
 </div>
 
-## Areas clients most often ask about
+## How searches usually take shape
 
-Surrey, South Surrey, White Rock, Fleetwood, Cloverdale, and the broader Greater Vancouver market.
+Most searches start broad, then resolve into a mix of municipalities and specific neighbourhoods. The distinction becomes clear once priorities, lifestyle, and timing are defined.
 
 ## A private way to search
 
-Some clients prefer not to create accounts or leave a digital trail while they explore. If that’s you, reach out and I can run a discreet search and share only what’s relevant.
+Some searches are better handled quietly. If you’d rather not create accounts or leave a digital trail, I can run a private search and share only what’s relevant.
 
