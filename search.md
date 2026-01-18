@@ -9,11 +9,8 @@ permalink: /search/
 
 If you want to explore what’s currently available, use the listing portal below. It opens in a new tab.
 
-<p>
-  <a class="btn" href="[PASTE_YOUR_EXP_SURREY_LINK_HERE](https://tanvirbhupal.exprealty.com/index.php?advanced=1&display=Surrey+BC&min=1900000&max=100000000&beds=0&baths=0&types%5B%5D=1&types%5B%5D=2&types%5B%5D=31&types%5B%5D=5&minfootage=0&maxfootage=30000&minacres=0&maxacres=&yearbuilt=0&maxyearbuilt=0&walkscore=0&keywords=&areas%5B%5D=city%3Asurrey%3Abc&sortby=listings.listingdate+DESC&rtype=map)" target="_blank" rel="noopener">
-    Open the listings portal
-  </a>
-</p>
+[Browse Surrey listings][surrey]{: .btn target="_blank" rel="noopener"}
+
 
 Most people start by browsing, then narrow quickly once the direction is clear. If you want a tighter short list, send me what matters most (area, home type, timing, and any non-negotiables) and I’ll curate options that actually fit.
 
@@ -28,3 +25,4 @@ Surrey, South Surrey, White Rock, Fleetwood, Cloverdale, and the broader Greater
 ## A private way to search
 
 Some clients prefer not to create accounts or leave a digital trail while they explore. If that’s you, reach out and I can run a discreet search and share only what’s relevant.
+[surrey]: https://tanvirbhupal.exprealty.com/index.php?advanced=1&display=Surrey+BC&min=1900000&max=100000000&beds=0&baths=0&types%5B%5D=1&types%5B%5D=2&types%5B%5D=31&types%5B%5D=5&minfootage=0&maxfootage=30000&minacres=0&maxacres=&yearbuilt=0&maxyearbuilt=0&walkscore=0&keywords=&areas%5B%5D=city%3Asurrey%3Abc&sortby=listings.listingdate+DESC&rtype=map
