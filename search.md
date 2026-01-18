@@ -7,22 +7,32 @@ permalink: /search/
 
 # Browse listings
 
-If you want to explore what’s currently available, use the listing portal below. It opens in a new tab.
+Browse current listings through the portal below (opens in a new tab).
 
-[Browse Surrey listings](https://tanvirbhupal.exprealty.com/index.php?advanced=1&display=Surrey+BC&min=1900000&max=100000000&beds=0&baths=0&types%5B%5D=1&types%5B%5D=2&types%5B%5D=31&types%5B%5D=5&minfootage=0&maxfootage=30000&minacres=0&maxacres=&yearbuilt=0&maxyearbuilt=0&walkscore=0&keywords=&areas%5B%5D=city%3Asurrey%3Abc&sortby=listings.listingdate+DESC&rtype=map)
+<div class="button-center">
+  <p>
+    <a class="btn-primary"
+       href="https://tanvirbhupal.exprealty.com/index.php?advanced=1&display=Surrey+BC&min=1900000&max=100000000&beds=0&baths=0&types%5B%5D=1&types%5B%5D=2&types%5B%5D=31&types%5B%5D=5&minfootage=0&maxfootage=30000&minacres=0&maxacres=&yearbuilt=0&maxyearbuilt=0&walkscore=0&keywords=&areas%5B%5D=city%3Asurrey%3Abc&sortby=listings.listingdate+DESC&rtype=map"
+       target="_blank"
+       rel="noopener">
+      Browse
+    </a>
+  </p>
+</div>
+
 
 
 
 Most people start by browsing, then narrow quickly once the direction is clear. If you want a tighter short list, send me what matters most (area, home type, timing, and any non-negotiables) and I’ll curate options that actually fit.
 
-<p>
-  <a class="btn-secondary" href="/contact/">
-    Contact Tanvir
-  </a>
-</p>
+<div class="button-center">
+  <p>
+    <a class="btn-secondary" href="/contact/">
+      Contact Tanvir
+    </a>
+  </p>
+</div>
 
-
-</p>
 
 ## Areas clients most often ask about
 
