@@ -16,7 +16,12 @@ If you want to explore what’s currently available, use the listing portal belo
 Most people start by browsing, then narrow quickly once the direction is clear. If you want a tighter short list, send me what matters most (area, home type, timing, and any non-negotiables) and I’ll curate options that actually fit.
 
 <p>
-  <a href="/contact/">Contact Tanvir</a>
+  <a class="btn-secondary" href="/contact/">
+    Contact Tanvir
+  </a>
+</p>
+
+
 </p>
 
 ## Areas clients most often ask about
