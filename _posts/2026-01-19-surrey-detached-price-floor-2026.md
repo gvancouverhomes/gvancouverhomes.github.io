@@ -9,7 +9,7 @@ date: 2026-01-19
 
 In January 2026, waiting for the market to “confirm” a bottom is often the strategy that costs serious buyers their best opportunities.
 
-By the time headlines announce that prices have stabilized, many of the most desirable estates in :contentReference[oaicite:0]{index=0} and :contentReference[oaicite:1]{index=1} have already traded hands. Not because buyers rushed, but because they paid attention to inventory instead of sentiment.
+By the time headlines announce that prices have stabilized, many of the most desirable estates in Elgin Chantrell and Panorama Ridge have already traded hands. Not because buyers rushed, but because they paid attention to inventory instead of sentiment.
 
 Surrey is currently carrying roughly seventeen months of detached home supply. That level of choice shifts leverage decisively toward the buyer. This is not a crash. It is a recalibration, one that rewards patience, preparation, and the ability to act without needing external validation.
 
@@ -29,4 +29,5 @@ True wealth is rarely built by perfect timing. It is built by recognizing when t
 
 The spring rebound will come, as it always does. But the most asymmetrical opportunities of 2026 are being negotiated in the quiet of January.
 
-*If you’re evaluating a move this year and want clarity beyond headlines, a short conversation often answers more than months of watching the market.*
+*If you’re evaluating a move this year and want clarity beyond headlines, a short conversation often answers more than months of watching the market.* [Connect](/contact/)
+
