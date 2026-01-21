@@ -1,15 +1,71 @@
-/* refined styles – base layer confirmed */
+/* NAV refinement (matches header.html classes) */
 
-:root{
-  --ink: #0f172a;
-  --muted: #475569;
-  --border: rgba(15, 23, 42, 0.12);
-
-  --accent: #1d4ed8;
-  --accent2: #2563eb;
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,0.84);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(15,23,42,0.08);
 }
 
-body{
-  background: #f6f7fb;
-  color: var(--ink);
+.nav-wrap{
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand{
+  font-family: "Libre Baskerville", Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  color: #0f172a;
+  white-space: nowrap;
+}
+
+.site-nav ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-nav a{
+  text-decoration: none;
+  color: rgba(15,23,42,0.80);
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.site-nav a:hover{
+  background: rgba(37,99,235,0.08);
+  color: rgba(15,23,42,0.95);
+}
+
+.site-nav a.cta{
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(37,99,235,0.25);
+}
+
+.site-nav li.active a{
+  background: rgba(15,23,42,0.06);
+  color: rgba(15,23,42,0.95);
+}
+
+/* Mobile */
+@media (max-width: 860px){
+  .nav-wrap{ flex-wrap: wrap; }
+  .site-nav ul{ display: none; width: 100%; padding-top: 10px; }
+  .site-nav ul.open{ display: flex; flex-direction: column; align-items: flex-start; }
 }
