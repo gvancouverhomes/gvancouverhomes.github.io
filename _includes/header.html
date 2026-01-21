@@ -1,15 +1,20 @@
 <header class="site-header">
-  <div class="container">
+  <div class="container nav-wrap">
 
-    <nav class="site-nav">
+    <a class="brand" href="/">Tanvir Bhupal</a>
+
+    <nav class="site-nav nav">
       <ul>
         <li class="{% if page.url == '/' %}active{% endif %}"><a href="/">Home</a></li>
         <li class="{% if page.url == '/about/' %}active{% endif %}"><a href="/about/">About</a></li>
         <li class="{% if page.url == '/blog/' or page.url contains '/blog/' %}active{% endif %}"><a href="/blog/">Blog</a></li>
         <li class="{% if page.url == '/search/' %}active{% endif %}"><a href="/search/">Browse listings</a></li>
-       <li class="{% if page.url == '/contact/' %}active{% endif %}"><a href="/contact/">Contact</a></li>
+        <li class="{% if page.url == '/contact/' %}active{% endif %}">
+          <a href="/contact/" class="cta">Contact</a>
+        </li>
       </ul>
     </nav>
+
     <div class="mobile-nav-toggle" onclick="document.querySelector('.site-nav ul').classList.toggle('open');">
       ☰
     </div>
