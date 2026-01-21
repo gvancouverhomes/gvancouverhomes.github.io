@@ -1,6 +1,9 @@
-/* refined styles – test layer */
+/* refined styles – visibility test */
 
-body{
+body {
   background: #f6f7fb;
 }
 
+a {
+  text-decoration: underline;
+}
