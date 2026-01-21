@@ -1,85 +1,109 @@
-/* Refined navigation styling */
+/* Refined nav – match the uploaded mockup */
 
-.site-header{
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: rgba(255,255,255,0.84);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(15,23,42,0.08);
+:root{
+  --max: 1200px;
+  --pad-x: 24px;
+  --accent: #004b8d;
+  --accentHover: #1f6fb8;
+  --ink: #0f172a;
 }
 
-.nav-wrap{
-  max-width: 1080px;
+/* Give the page room if header is fixed */
+body{
+  padding-top: 74px;
+}
+
+/* Header bar */
+.site-header{
+  width: 100%;
+  position: fixed;       /* mockup is fixed */
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+}
+
+/* Your header uses .container, so we override it to behave like the mockup's nav-container */
+.site-header .container{
+  max-width: var(--max);
   margin: 0 auto;
-  padding: 14px 22px;
+  padding: 16px var(--pad-x);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 18px;
 }
 
+/* Brand */
 .brand{
-  font-family: "Libre Baskerville", Georgia, "Times New Roman", Times, serif;
-  font-size: 18px;
-  letter-spacing: 0.2px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent);
   text-decoration: none;
-  color: #0f172a;
   white-space: nowrap;
 }
 
+/* Links row */
 .site-nav ul{
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 24px;           /* mockup spacing */
   margin: 0;
   padding: 0;
 }
 
 .site-nav a{
+  color: var(--accent);
   text-decoration: none;
-  color: rgba(15,23,42,0.80);
-  font-size: 14px;
-  padding: 8px 10px;
-  border-radius: 12px;
-  display: inline-block;
+  font-weight: 500;
 }
 
 .site-nav a:hover{
-  background: rgba(37,99,235,0.08);
-  color: rgba(15,23,42,0.95);
+  color: var(--accentHover);
 }
 
+/* CTA (Contact) – mockup style */
 .site-nav a.cta{
-  background: linear-gradient(135deg, #1d4ed8, #2563eb);
-  color: #fff;
-  padding: 10px 14px;
-  border-radius: 999px;
-  font-weight: 600;
-  box-shadow: 0 10px 25px rgba(37,99,235,0.25);
+  padding: 8px 16px;
+  border: 2px solid var(--accent);
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+.site-nav a.cta:hover{
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Active state */
 .site-nav li.active a{
-  background: rgba(15,23,42,0.06);
-  color: rgba(15,23,42,0.95);
+  color: var(--ink);
 }
 
 /* Mobile */
+.mobile-nav-toggle{
+  display: none;
+  cursor: pointer;
+  font-size: 22px;
+  color: var(--accent);
+}
+
+/* If your existing CSS already handles mobile, this won’t fight it much */
 @media (max-width: 860px){
-  .nav-wrap{
-    flex-wrap: wrap;
-  }
+  .mobile-nav-toggle{ display: block; }
 
   .site-nav ul{
     display: none;
     width: 100%;
-    padding-top: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding-top: 12px;
   }
 
   .site-nav ul.open{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
   }
 }
