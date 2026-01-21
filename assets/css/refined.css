@@ -1,22 +1,52 @@
-/* Refined nav – match the uploaded mockup */
+/* =========================================================
+   Refined theme layer (loads after style.css)
+   Goal: match the refined mockup look exactly
+   ========================================================= */
 
 :root{
   --max: 1200px;
+  --content: 1000px;
   --pad-x: 24px;
+
   --accent: #004b8d;
   --accentHover: #1f6fb8;
-  --ink: #0f172a;
+
+  --text: #333;
+  --muted: #555;
+  --bg: #fafafa;
+
+  /* Swap this path later if needed */
+  --hero-image: url('/assets/images/hero.jpg');
 }
 
-/* Give the page room if header is fixed */
+/* Base look */
 body{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  overflow-x: hidden;
+
+  /* account for fixed header */
   padding-top: 74px;
 }
 
-/* Header bar */
+a{
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover{
+  color: var(--accentHover);
+}
+
+/* =========================================================
+   Header / Navigation (mockup match)
+   ========================================================= */
+
 .site-header{
   width: 100%;
-  position: fixed;       /* mockup is fixed */
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
@@ -24,14 +54,14 @@ body{
   box-shadow: 0 1px 4px rgba(0,0,0,0.10);
 }
 
-/* Your header uses .container, so we override it to behave like the mockup's nav-container */
+/* Your site uses .container, so make it behave like mockup .nav-container */
 .site-header .container{
   max-width: var(--max);
   margin: 0 auto;
   padding: 16px var(--pad-x);
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 18px;
 }
 
@@ -40,7 +70,6 @@ body{
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--accent);
-  text-decoration: none;
   white-space: nowrap;
 }
 
@@ -48,41 +77,36 @@ body{
 .site-nav ul{
   list-style: none;
   display: flex;
+  gap: 24px;
   align-items: center;
-  gap: 24px;           /* mockup spacing */
   margin: 0;
   padding: 0;
 }
 
 .site-nav a{
-  color: var(--accent);
-  text-decoration: none;
   font-weight: 500;
+  color: var(--accent);
 }
 
-.site-nav a:hover{
-  color: var(--accentHover);
-}
-
-/* CTA (Contact) – mockup style */
+/* CTA (Connect) */
 .site-nav a.cta{
   padding: 8px 16px;
   border: 2px solid var(--accent);
-  border-radius: 6px;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 .site-nav a.cta:hover{
-  background: var(--accent);
+  background-color: var(--accent);
   color: #fff;
 }
 
 /* Active state */
-.site-nav li.active a{
-  color: var(--ink);
+.site-nav li.active a,
+.site-nav a[aria-current="page"]{
+  color: var(--text);
 }
 
-/* Mobile */
+/* Mobile toggle (only if you already have it wired) */
 .mobile-nav-toggle{
   display: none;
   cursor: pointer;
@@ -90,9 +114,16 @@ body{
   color: var(--accent);
 }
 
-/* If your existing CSS already handles mobile, this won’t fight it much */
 @media (max-width: 860px){
   .mobile-nav-toggle{ display: block; }
+
+  .site-header .container{
+    flex-wrap: wrap;
+  }
+
+  .site-nav{
+    width: 100%;
+  }
 
   .site-nav ul{
     display: none;
@@ -106,4 +137,175 @@ body{
   .site-nav ul.open{
     display: flex;
   }
+}
+
+/* =========================================================
+   Hero (mockup match)
+   ========================================================= */
+
+.hero{
+  height: 90vh;
+  background-image: var(--hero-image);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero-content{
+  position: relative;
+  text-align: center;
+  color: #fff;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-content h1{
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hero-content p{
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-content .hero-cta{
+  background-color: var(--accent);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+.hero-content .hero-cta:hover{
+  background-color: var(--accentHover);
+}
+
+/* =========================================================
+   Main content + sections (mockup match)
+   ========================================================= */
+
+main{
+  margin-top: 80px;
+}
+
+.section{
+  max-width: var(--content);
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+.section h2{
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.lead{
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+}
+
+/* =========================================================
+   Blog cards (mockup match)
+   ========================================================= */
+
+.blog-cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.blog-card{
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.blog-card:hover{
+  transform: translateY(-4px);
+}
+
+.blog-card img{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.blog-card-content{
+  padding: 1rem 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card-content h3{
+  font-size: 1.25rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.blog-card-content p{
+  flex: 1;
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.blog-card-content .read-more{
+  align-self: flex-start;
+  background-color: var(--accent);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+.blog-card-content .read-more:hover{
+  background-color: var(--accentHover);
+}
+
+/* =========================================================
+   Footer (mockup match)
+   ========================================================= */
+
+footer{
+  background-color: var(--accent);
+  color: #fff;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+footer p{
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+footer a{
+  color: #fff;
+  text-decoration: underline;
+  margin: 0 0.5rem;
+  font-size: 0.9rem;
+}
+footer a:hover{
+  color: #d6e4f4;
 }
