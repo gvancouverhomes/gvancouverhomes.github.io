@@ -1,9 +1,15 @@
-/* refined styles – visibility test */
+/* refined styles – base layer confirmed */
 
-body {
-  background: #f6f7fb;
+:root{
+  --ink: #0f172a;
+  --muted: #475569;
+  --border: rgba(15, 23, 42, 0.12);
+
+  --accent: #1d4ed8;
+  --accent2: #2563eb;
 }
 
-a {
-  text-decoration: underline;
+body{
+  background: #f6f7fb;
+  color: var(--ink);
 }
