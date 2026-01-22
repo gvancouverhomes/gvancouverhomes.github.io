@@ -309,3 +309,54 @@ footer a{
 footer a:hover{
   color: #d6e4f4;
 }
+/* Footer (force mockup blue) */
+.site-footer{
+  background-color: var(--accent);
+  color: #fff;
+  padding: 2rem 1.5rem;
+}
+
+.site-footer a{
+  color: #fff;
+  text-decoration: underline;
+}
+
+.site-footer a:hover{
+  color: #d6e4f4;
+}
+
+.site-footer .container{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+  text-align: center;
+}
+.footer-disclaimer{
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  opacity: 0.75;
+  line-height: 1.5;
+}
+
+.footer-copy{
+  margin-top: 1rem;
+  opacity: 0.95;
+}
+
+.footer-links{
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.footer-social{
+  display: flex;
+  justify-content: center;
+  margin: 0.75rem 0;
+}
+
+.footer-social a{
+  text-decoration: none;
+}
