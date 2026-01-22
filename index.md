@@ -5,16 +5,16 @@ description: Helping families move with clarity and confidence.
 ---
 
 <section class="hero">
-  <div class="hero-overlay">
-    <div class="hero-text">
-      <h1>Tanvir Bhupal</h1>
-      <p>
-        I work with people who move with intention. Families who know what matters.<br>
-        Those who value clarity, privacy, and real experience.
-      </p>
-    </div>
+  <div class="hero-content">
+    <h1>For people who move with intention</h1>
+    <p>
+      Families who know what matters.<br>
+      Those who value clarity, privacy, and real experience.
+    </p>
   </div>
 </section>
+
+
 
 <section class="intro">
   <div class="container intro-wrap">
