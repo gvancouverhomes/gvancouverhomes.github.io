@@ -360,3 +360,20 @@ footer a:hover{
 .footer-social a{
   text-decoration: none;
 }
+.footer-copy{
+  color: #ffffff;
+  opacity: 1;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+.site-footer p{
+  margin-bottom: 0.25rem;
+}
+
+.footer-links{
+  margin-bottom: 0.25rem;
+}
+
+.footer-social{
+  margin: 0.25rem 0;
+}
