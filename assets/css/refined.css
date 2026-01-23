@@ -15,8 +15,7 @@
   --muted: #555;
   --bg: #fafafa;
 
-  /* Swap this path later if needed */
-  --hero-image: url('/assets/images/hero.jpg');
+ background-image: url("/assets/images/hero.jpg");
 }
 
 /* Base look */
