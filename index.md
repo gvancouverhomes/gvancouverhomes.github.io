@@ -14,8 +14,6 @@ description: Helping families move with clarity and confidence.
   </div>
 </section>
 
-
-
 <section class="intro">
   <div class="container intro-wrap">
     <div class="intro-left">
@@ -32,27 +30,23 @@ description: Helping families move with clarity and confidence.
     </div>
 
     <div class="intro-right">
-      <h3 class="latest-title">Latest writing</h3>
-
-      {% if site.posts.size > 0 %}
-        <div class="latest-grid">
-          {% for post in site.posts limit:6 %}
-            <a class="post-card" href="{{ post.url }}">
-              <div class="post-card-inner">
-                <div class="post-title">{{ post.title }}</div>
-                {% if post.description %}
-                  <div class="post-desc">{{ post.description }}</div>
-                {% endif %}
-                <div class="post-meta">
-                  {{ post.date | date: "%b %e, %Y" }}
-                </div>
-              </div>
+      <div class="blog-cards">
+        {% for post in site.posts limit:3 %}
+          <article class="blog-card">
+            <a href="{{ post.url | relative_url }}">
+              <img
+                src="{{ post.image | default: '/assets/images/blog/placeholder.jpg' | relative_url }}"
+                alt="{{ post.title | escape }}">
             </a>
-          {% endfor %}
-        </div>
-      {% else %}
-        <p class="no-posts">No posts yet. The first one is coming soon.</p>
-      {% endif %}
+
+            <div class="blog-card-content">
+              <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+              <p>{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
+              <a class="read-more" href="{{ post.url | relative_url }}">Read More</a>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>
