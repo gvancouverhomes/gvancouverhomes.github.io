@@ -31,7 +31,7 @@ description: Helping families move with clarity and confidence.
   <h2>Latest Insights</h2>
 
   <div class="blog-cards">
-    {% for post in site.posts limit:3 %}
+    {% for post in site.posts limit:2 %}
       <article class="blog-card">
         <a href="{{ post.url | relative_url }}">
           <img
