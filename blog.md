@@ -4,7 +4,7 @@ title: Blog
 description: Insights, stories, and perspectives on Greater Vancouver real estate for thoughtful buyers and sellers.
 permalink: /blog/
 ---
-
+{% raw %}
 <section class="section">
   <h2>Blog</h2>
 
@@ -26,3 +26,6 @@ permalink: /blog/
     {% endfor %}
   </div>
 </section>
+{% endraw %}
+
+
