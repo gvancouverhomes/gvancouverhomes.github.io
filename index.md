@@ -14,39 +14,37 @@ description: Helping families move with clarity and confidence.
   </div>
 </section>
 
-<section class="intro">
-  <div class="container intro-wrap">
-    <div class="intro-left">
-      <h2>It Starts Here</h2>
+<section class="section">
+  <h2>It Starts Here</h2>
 
-      <p class="statement">
-        This isn’t about sales. It’s about alignment.<br>
-        The process is steady, not rushed.<br>
-        Decisions are made with confidence, not noise.<br>
-        Your time, energy, and long-term vision are protected at every step.
-      </p>
+  <p class="statement">
+    This isn’t about sales. It’s about alignment.<br>
+    The process is steady, not rushed.<br>
+    Decisions are made with confidence, not noise.<br>
+    Your time, energy, and long-term vision are protected at every step.
+  </p>
 
-      <a class="read-more" href="/blog/">Insights</a>
-    </div>
+  <a class="read-more" href="/blog/">Insights</a>
+</section>
 
-    <div class="intro-right">
-      <div class="blog-cards">
-        {% for post in site.posts limit:3 %}
-          <article class="blog-card">
-            <a href="{{ post.url | relative_url }}">
-              <img
-                src="{{ post.image | default: '/assets/images/blog/placeholder.jpg' | relative_url }}"
-                alt="{{ post.title | escape }}">
-            </a>
+<section class="section">
+  <h2>Latest Insights</h2>
 
-            <div class="blog-card-content">
-              <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-              <p>{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
-              <a class="read-more" href="{{ post.url | relative_url }}">Read More</a>
-            </div>
-          </article>
-        {% endfor %}
-      </div>
-    </div>
+  <div class="blog-cards">
+    {% for post in site.posts limit:3 %}
+      <article class="blog-card">
+        <a href="{{ post.url | relative_url }}">
+          <img
+            src="{{ post.image | default: '/assets/images/blog/placeholder.jpg' | relative_url }}"
+            alt="{{ post.title | escape }}">
+        </a>
+
+        <div class="blog-card-content">
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p>{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
+          <a class="read-more" href="{{ post.url | relative_url }}">Read More</a>
+        </div>
+      </article>
+    {% endfor %}
   </div>
 </section>
