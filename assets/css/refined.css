@@ -428,3 +428,20 @@ footer a:hover{
     grid-template-columns: 1fr;
   }
 }
+/* HERO: enforce height + background image */
+.hero {
+  min-height: 70vh;
+  background-image: url("/assets/images/hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
