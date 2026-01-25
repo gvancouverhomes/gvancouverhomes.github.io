@@ -2,6 +2,7 @@
 layout: post
 title: "The South Surrey Land Value Shift: When Space, Stability, and Privacy Begin to Matter More"
 description: "In 2026, many affluent families are reassessing the trade-offs between legacy city addresses and large-format estates in South Surrey. The shift is less about status and more about land, privacy, and long-term certainty."
+image: /assets/images/blog/south-surrey-land-value-shift.png
 date: 2026-01-16
 ---
 
