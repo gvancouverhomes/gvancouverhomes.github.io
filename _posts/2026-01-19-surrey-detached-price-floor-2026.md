@@ -2,7 +2,9 @@
 layout: post
 title: "The Surrey Detached Price Floor: Why Inventory Is Your Greatest Negotiating Tool in 2026"
 description: "Surrey entered 2026 with decade-high detached home inventory. For prepared buyers, this shift has created a rare negotiating window, especially for high-quality land in South Surrey."
+image: /assets/images/blog/surrey-detached-price-floor.png
 date: 2026-01-19
+
 ---
 
 **TL;DR:** Surrey entered 2026 with the highest level of detached home inventory seen in over a decade. While headlines continue to talk about uncertainty, the reality for prepared buyers is more practical. The gap between asking prices and real market value has widened, creating a rare opportunity, especially for high-quality land in South Surrey. Many people are still waiting for a “bottom” that, in practical terms, has already arrived.
