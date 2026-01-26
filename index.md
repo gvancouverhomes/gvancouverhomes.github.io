@@ -14,7 +14,7 @@ description: Helping families move with clarity and confidence.
   </div>
 </section>
 
-<section class="section">
+<section class="section intro-wide">
   <h2>It Starts Here</h2>
 
   <p class="statement">
