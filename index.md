@@ -1,8 +1,20 @@
 ---
 layout: default
-title: Home
-description: Helping families move with clarity and confidence.
+title: Tanvir Bhupal
+description: For people who move with intention. Clarity, privacy, and real experience for families relocating in Greater Vancouver.
+permalink: /
 ---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Tanvir Bhupal",
+  "description": "For people who move with intention. Clarity, privacy, and real experience for families relocating in Greater Vancouver.",
+  "url": "https://tanvirbhupal.com/",
+  "inLanguage": "en-CA"
+}
+</script>
 
 <section class="hero">
   <div class="hero-content">
@@ -10,6 +22,10 @@ description: Helping families move with clarity and confidence.
     <p>
       Families who know what matters.<br>
       Those who value clarity, privacy, and real experience.
+    </p>
+
+    <p class="visually-hidden">
+      Real estate insights for families relocating across Greater Vancouver, including Vancouver, West Vancouver, North Vancouver, Surrey, South Surrey, and White Rock.
     </p>
   </div>
 </section>
@@ -27,21 +43,21 @@ description: Helping families move with clarity and confidence.
   <a class="read-more" href="/blog/">Insights</a>
 </section>
 
-<section class="section">
+<section class="section latest-insights">
   <h2>Latest Insights</h2>
 
-<div class="blog-cards">
-  {% for post in site.posts limit:3 %}
-    <a class="blog-card" href="{{ post.url | relative_url }}">
-      <img
-        src="{{ post.image | relative_url }}"
-        alt="{{ post.title | escape }}">
+  <div class="blog-cards">
+    {% for post in site.posts limit:3 %}
+      <a class="blog-card" href="{{ post.url | relative_url }}">
+        <img
+          src="{{ post.image | relative_url }}"
+          alt="{{ post.title | escape }}">
 
-      <div class="blog-card-content">
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
-      </div>
-    </a>
-  {% endfor %}
-</div>
-
+        <div class="blog-card-content">
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>
