@@ -445,3 +445,21 @@ footer a:hover{
   position: relative;
   z-index: 2;
 }
+/* Widen Latest Insights section only */
+.section:has(.blog-cards) {
+  max-width: 1200px;
+}
+
+/* 3-up editorial grid */
+.blog-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* Mobile safety */
+@media (max-width: 900px) {
+  .blog-cards {
+    grid-template-columns: 1fr;
+  }
+}
