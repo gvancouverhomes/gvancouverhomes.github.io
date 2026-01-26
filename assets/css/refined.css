@@ -463,3 +463,9 @@ footer a:hover{
     grid-template-columns: 1fr;
   }
 }
+@media (min-width: 900px) {
+  .section.intro-wide {
+    max-width: 1280px;
+    width: 100%;
+  }
+}
