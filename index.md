@@ -30,21 +30,18 @@ description: Helping families move with clarity and confidence.
 <section class="section">
   <h2>Latest Insights</h2>
 
-  <div class="blog-cards">
-    {% for post in site.posts limit:2 %}
-      <article class="blog-card">
-        <a href="{{ post.url | relative_url }}">
-          <img
-            src="{{ post.image | default: '/assets/images/blog/placeholder.jpg' | relative_url }}"
-            alt="{{ post.title | escape }}">
-        </a>
+<div class="blog-cards">
+  {% for post in site.posts limit:3 %}
+    <a class="blog-card" href="{{ post.url | relative_url }}">
+      <img
+        src="{{ post.image | relative_url }}"
+        alt="{{ post.title | escape }}">
 
-        <div class="blog-card-content">
-          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          <p>{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
-          <a class="read-more" href="{{ post.url | relative_url }}">Read More</a>
-        </div>
-      </article>
-    {% endfor %}
-  </div>
-</section>
+      <div class="blog-card-content">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
+      </div>
+    </a>
+  {% endfor %}
+</div>
+
