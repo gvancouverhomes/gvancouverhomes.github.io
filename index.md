@@ -31,17 +31,20 @@ permalink: /
 </section>
 
 <section class="section intro-wide">
-  <h2>It Starts Here</h2>
+  <div class="container">
+    <h2>It Starts Here</h2>
 
-  <p class="statement">
-    This isn’t about sales. It’s about alignment.<br>
-    The process is steady, not rushed.<br>
-    Decisions are made with confidence, not noise.<br>
-    Your time, energy, and long-term vision are protected at every step.
-  </p>
+    <p class="statement">
+      This isn’t about sales. It’s about alignment.<br>
+      The process is steady, not rushed.<br>
+      Decisions are made with confidence, not noise.<br>
+      Your time, energy, and long-term vision are protected at every step.
+    </p>
 
-  <a class="read-more" href="/blog/">Insights</a>
+    <a class="read-more" href="/blog/">Insights</a>
+  </div>
 </section>
+
 
 <section class="section latest-insights">
   <h2>Latest Insights</h2>
