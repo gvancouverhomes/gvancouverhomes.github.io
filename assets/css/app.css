@@ -165,7 +165,7 @@ p + p {
 
 .hero-content p {
   margin-top: 14px;
-  max-width: 58ch;
+  max-width: 72ch;
   color: #2b2b2b;
 }
 
@@ -247,7 +247,7 @@ p + p {
   text-decoration: none;
 }
 /* =========================
-   Header + Horizontal Nav (refined)
+   Header + Horizontal Nav (final)
    ========================= */
 
 .site-header {
@@ -276,7 +276,7 @@ p + p {
 .site-nav {
   display: flex;
   align-items: center;
-  margin-left: auto; /* forces nav to the right */
+  margin-left: auto;
 }
 
 .site-nav ul {
@@ -298,7 +298,6 @@ p + p {
   text-underline-offset: 5px;
 }
 
-/* Softer active state */
 .site-nav .active > a,
 .site-nav a[aria-current="page"] {
   text-decoration: underline;
@@ -306,26 +305,37 @@ p + p {
   text-underline-offset: 6px;
 }
 
-/* Intentional hover (still subtle) */
 .site-nav a:hover {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 6px;
 }
 
-/* Desktop should not show hamburger if you have one */
-.menu-toggle,
-.nav-toggle,
-.hamburger {
-  display: none;
+/* Kill any desktop hamburger/toggle */
+@media (min-width: 721px) {
+  .site-header button[aria-label*="menu" i],
+  .site-header button[aria-controls*="nav" i],
+  .site-header button[aria-controls*="menu" i],
+  .site-header button[aria-expanded],
+  .site-header a[aria-label*="menu" i],
+  .site-header a[aria-controls*="nav" i],
+  .site-header a[aria-controls*="menu" i] {
+    display: none !important;
+  }
 }
 
-/* Mobile layout */
+/* Mobile: keep header clean */
 @media (max-width: 720px) {
   .site-header .container {
     flex-direction: row;
     align-items: center;
   }
+
+  .site-nav ul {
+    display: none;
+  }
+}
+
 
   .site-nav ul {
     display: none; /* keep links hidden if you use a hamburger */
