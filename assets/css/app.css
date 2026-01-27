@@ -112,6 +112,41 @@ p {
 p + p {
   margin-top: 14px;
 }
+/* =========================
+   Global vertical rhythm
+   ========================= */
+
+/* Headings need breathing room */
+h1 {
+  margin-bottom: 14px;
+}
+
+h2 {
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
+h3 {
+  margin-top: 24px;
+  margin-bottom: 10px;
+}
+
+/* First paragraph after a heading should sit closer */
+h1 + p,
+h2 + p,
+h3 + p {
+  margin-top: 0;
+}
+
+/* Paragraph spacing everywhere */
+p {
+  margin-bottom: 14px;
+}
+
+/* Images inside content need calm spacing */
+main img {
+  margin: 28px 0;
+}
 
 /* =========================
    3. Layout primitives
