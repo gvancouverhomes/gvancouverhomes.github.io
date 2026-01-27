@@ -1269,4 +1269,39 @@ p { margin: 0 0 1rem; }
   overflow: hidden;
 }
 
+/* =========================================
+   Homepage layout correction (FINAL)
+   ========================================= */
+
+/* Kill global centering for homepage wide sections */
+.section.intro-wide,
+.section.latest-insights {
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: clamp(2rem, 6vw, 6rem);
+  padding-right: clamp(2rem, 6vw, 6rem);
+}
+
+/* Keep inner pages centered (do NOT touch other sections) */
+main.page-content > .section:not(.intro-wide):not(.latest-insights) {
+  max-width: var(--content);
+  margin: 4rem auto;
+}
+
+/* Intro text alignment */
+.section.intro-wide h2,
+.section.intro-wide p,
+.section.intro-wide .read-more {
+  text-align: left;
+  max-width: 720px;
+}
+
+/* Blog cards: remove boxed/square feel */
+.section.latest-insights article,
+.section.latest-insights .post,
+.section.latest-insights .blog-card {
+  border-radius: 16px;
+  overflow: hidden;
+}
 
