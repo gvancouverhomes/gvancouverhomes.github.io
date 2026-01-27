@@ -1,6 +1,6 @@
 /* app.css
    Single source of truth
-   Foundation only — no polish, no cards, no hero styling
+   Stable, accessible, mobile-first baseline
 */
 
 /* =========================
@@ -20,7 +20,7 @@ html {
 body {
   min-height: 100%;
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.65;
   background-color: #fbfbfa;
   color: #111111;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -49,6 +49,7 @@ select {
 a {
   color: #1f2f4a;
   text-decoration: underline;
+  text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
 
@@ -65,4 +66,183 @@ a:focus-visible {
   scroll-margin-top: 80px;
 }
 
-/* ===============*
+/* Visually hidden (still readable by screen readers) */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/* =========================
+   2. Typography
+   ========================= */
+
+h1,
+h2,
+h3 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(28px, 4vw, 44px);
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: clamp(20px, 2.4vw, 28px);
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+p {
+  margin: 0;
+  color: #111111;
+}
+
+p + p {
+  margin-top: 14px;
+}
+
+/* =========================
+   3. Layout primitives
+   ========================= */
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.section {
+  padding: 64px 0;
+}
+
+/* Give the main content a little top/bottom rhythm */
+.page-content {
+  padding-bottom: 48px;
+}
+
+/* =========================
+   4. Homepage structure
+   ========================= */
+
+/* Opening magazine image */
+.section.opening-image {
+  padding: 28px 0 10px;
+}
+
+.section.opening-image img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+@media (max-width: 640px) {
+  .section.opening-image img {
+    height: 220px;
+  }
+}
+
+/* Hero text block (below opening image) */
+.hero {
+  padding: 18px 0 28px;
+}
+
+.hero-content h1 {
+  max-width: 22ch;
+}
+
+.hero-content p {
+  margin-top: 14px;
+  max-width: 58ch;
+  color: #2b2b2b;
+}
+
+/* Intro-wide */
+.section.intro-wide h2 {
+  margin-bottom: 16px;
+}
+
+.section.intro-wide .statement {
+  max-width: 68ch;
+  color: #1a1a1a;
+}
+
+.section.intro-wide .read-more {
+  display: inline-block;
+  margin-top: 18px;
+}
+
+/* Latest insights */
+.section.latest-insights h2 {
+  margin-bottom: 18px;
+}
+
+/* Blog card grid */
+.blog-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+@media (max-width: 900px) {
+  .blog-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.blog-card {
+  display: block;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  text-decoration: none;
+}
+
+.blog-card:hover {
+  border-color: rgba(31, 47, 74, 0.28);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.blog-card-content {
+  padding: 14px 14px 16px;
+}
+
+.blog-card-content h3 {
+  margin: 0;
+}
+
+.blog-card-content p {
+  margin-top: 8px;
+  color: #4a4a4a;
+  line-height: 1.55;
+}
+
+/* Prevent underline weirdness on card titles (cards are clickable already) */
+.blog-card h3,
+.blog-card p {
+  text-decoration: none;
+}
