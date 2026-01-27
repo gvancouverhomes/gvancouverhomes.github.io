@@ -247,7 +247,7 @@ p + p {
   text-decoration: none;
 }
 /* =========================
-   Header + Horizontal Nav (final)
+   Header + Horizontal Nav
    ========================= */
 
 .site-header {
@@ -272,7 +272,7 @@ p + p {
   white-space: nowrap;
 }
 
-/* Nav */
+/* Nav (desktop default) */
 .site-nav {
   display: flex;
   align-items: center;
@@ -311,41 +311,28 @@ p + p {
   text-underline-offset: 6px;
 }
 
-/* Kill any desktop hamburger/toggle */
+/* Desktop: hide only true menu toggles (no broad guessing) */
 @media (min-width: 721px) {
-  .site-header button[aria-label*="menu" i],
-  .site-header button[aria-controls*="nav" i],
-  .site-header button[aria-controls*="menu" i],
   .site-header button[aria-expanded],
-  .site-header a[aria-label*="menu" i],
-  .site-header a[aria-controls*="nav" i],
-  .site-header a[aria-controls*="menu" i] {
+  .site-header button[aria-controls],
+  .site-header a[aria-expanded],
+  .site-header a[aria-controls] {
     display: none !important;
   }
 }
 
-/* Mobile: keep header clean */
+/* Mobile: stack cleanly, keep links visible (no dependency on hamburger) */
 @media (max-width: 720px) {
   .site-header .container {
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 
   .site-nav ul {
-    display: none;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 12px 16px;
   }
 }
 
-
-  .site-nav ul {
-    display: none; /* keep links hidden if you use a hamburger */
-  }
-
-  .menu-toggle,
-  .nav-toggle,
-  .hamburger {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-}
