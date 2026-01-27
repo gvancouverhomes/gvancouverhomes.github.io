@@ -1,0 +1,1236 @@
+/* =========================================================
+   tanvirbhupal.com — app.css (single merged stylesheet)
+   Generated: 2026-01-27 01:15:07Z
+
+   Order preserved (same cascade you had before):
+   1) style.css  (base)
+   2) refined.css (refinements)
+   3) site.css   (overrides)
+
+   This file is a drop-in replacement for the 3 links.
+   ========================================================= */
+
+/* ===================== BEGIN style.css ===================== */
+/* =========================================================
+   Greater Vancouver Homes — Unified Stylesheet (FINAL)
+   ========================================================= */
+
+/* ---------- Base Reset ---------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #111;
+  background: #fff;
+}
+
+img { max-width: 100%; height: auto; vertical-align: middle; border: 0; }
+a { color: inherit; text-decoration: none; }
+ul, ol { margin: 0; padding: 0; }
+p { margin: 0 0 1rem; }
+
+/* ---------- Layout Helpers ---------- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.site-content { min-height: 48vh; }
+
+/* =========================================================
+   HEADER / NAVIGATION
+   ========================================================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  flex-wrap: wrap;
+}
+
+.logo a {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.site-nav { flex: 1 1 auto; }
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.site-nav a {
+  display: block;
+  padding: 0.5rem 0.25rem;
+  font-weight: 500;
+  color: #333;
+  border-bottom: 2px solid transparent;
+}
+.site-nav a:hover,
+.site-nav li.active a {
+  color: #000;
+  border-bottom-color: #000;
+}
+
+/* Mobile nav */
+.mobile-nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .mobile-nav-toggle { display: block; }
+  .site-nav ul {
+    display: none;
+    flex-direction: column;
+    padding-top: 0.75rem;
+    border-top: 1px solid #eee;
+  }
+  .site-nav ul.open { display: flex; }
+}
+
+/* =========================================================
+   HERO — Homepage (FINAL APPROVED)
+   ========================================================= */
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  min-height: 420px;
+  max-height: 620px;
+
+  background-image: url('/assets/images/hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom right,
+    rgba(0,0,0,0.30),
+    rgba(0,0,0,0.22)
+  );
+}
+
+.hero-overlay {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers the text card horizontally */
+  padding-left: clamp(1rem, 4vw, 2.5rem);
+  padding-right: clamp(1rem, 4vw, 2.5rem);
+  padding-bottom: clamp(2rem, 6vh, 4.5rem);
+}
+
+
+.hero-text {
+  max-width: min(760px, 92%);
+  background: rgba(255,255,255,0.80);
+  backdrop-filter: blur(3px);
+  color: #111;
+  padding: clamp(1rem, 3vw, 1.5rem) clamp(1.1rem, 3vw, 1.75rem);
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+}
+
+.hero-text h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.75rem, 4vw, 2.6rem);
+  line-height: 1.15;
+}
+
+.hero-text p {
+  margin: 0;
+  font-size: clamp(0.95rem, 1.7vw, 1.05rem);
+  line-height: 1.7;
+  color: #222;
+}
+
+/* Mobile hero */
+@media (max-width: 768px) {
+  .hero {
+    height: 42vh;
+    min-height: 320px;
+  }
+  .hero-overlay {
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 1.75rem;
+  }
+  .hero-text { text-align: center; }
+}
+
+/* ==============================
+   HOMEPAGE INTRO + LATEST POSTS
+   ============================== */
+
+.intro {
+  padding: 3.5rem 0;
+  background: #f7f7f7;
+}
+
+
+.read-more {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid #111;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.read-more:hover { background: #111; color: #fff; }
+
+/* =========================================================
+   ABOUT PAGE — TYPOGRAPHY
+   ========================================================= */
+.page-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #222;
+}
+
+.page-content h1,
+.page-content h2 {
+  text-align: center;
+  margin: 2.25rem 0 1rem;
+}
+
+.page-content p {
+  margin-bottom: 1.25rem;
+}
+
+/* =========================================================
+   ABOUT PAGE — IMAGE (FINAL FIX)
+   ========================================================= */
+.page-content > img:first-of-type {
+  width: 100vw;
+  max-width: none;
+
+  height: 32vh;
+  min-height: 240px;
+  max-height: 360px;
+
+  object-fit: cover;
+  object-position: center;
+
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: 0.75rem;
+  margin-bottom: 2rem;
+
+  border-radius: 0;
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .page-content > img:first-of-type {
+    height: 24vh;
+    min-height: 200px;
+  }
+}
+
+/* =========================================================
+   BLOG
+   ========================================================= */
+.blog-list { padding: 2rem 0; }
+.blog-list .container { max-width: 960px; }
+.post-card { padding: 1.25rem 0; border-bottom: 1px solid #eee; }
+.post-card:last-child { border-bottom: 0; }
+
+.post { padding: 2rem 0 3rem; }
+.post .container { max-width: 760px; }
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.site-footer {
+  border-top: 1px solid #eee;
+  background: #fafafa;
+  margin-top: 2rem;
+}
+.site-footer .container {
+  padding: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+}
+.footer-copy {
+  grid-column: 1 / -1;
+  font-size: 0.92rem;
+  color: #555;
+}
+/* =========================================================
+   FORCE HOMEPAGE HERO CARD CENTER (wins against overrides)
+   ========================================================= */
+@media (min-width: 769px) {
+  .hero-overlay {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .hero-text {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+}
+/* =========================================================
+   HEADER: center nav when logo is removed (force)
+   ========================================================= */
+.site-header .container{
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Stop nav from stretching full width */
+.site-header .site-nav{
+  flex: 0 1 auto !important;
+  margin: 0 auto !important;
+}
+
+/* Center the actual menu items */
+.site-header .site-nav ul{
+  justify-content: center !important;
+}
+
+/* Keep mobile toggle on the right */
+.site-header .mobile-nav-toggle{
+  position: absolute !important;
+  right: 1.25rem !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+/* ==============================
+   HOMEPAGE INTRO + LATEST POSTS
+   ============================== */
+
+.intro {
+  padding: 3.5rem 0;
+  background: #f7f7f7;
+}
+
+.intro-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.statement {
+  margin: 0 0 1.25rem;
+  line-height: 1.7;
+  max-width: 52ch;
+  font-size: 1.05rem;
+  color: #111;
+}
+
+.latest-title {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: rgba(17, 17, 17, 0.8);
+}
+
+.latest-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+}
+
+.post-card {
+  display: block;
+  background: #fff;
+  border: 1px solid rgba(17, 17, 17, 0.10);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.post-card:hover {
+  border-color: rgba(17, 17, 17, 0.22);
+}
+
+.post-title {
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 0.35rem;
+}
+
+.post-desc {
+  color: rgba(17, 17, 17, 0.75);
+  line-height: 1.55;
+  margin-bottom: 0.5rem;
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: rgba(17, 17, 17, 0.55);
+}
+
+@media (min-width: 900px) {
+  .intro {
+    padding: 4.5rem 0;
+  }
+
+  .intro-wrap {
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .latest-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* Widen homepage intro on desktop only (wins over global .container) */
+@media (min-width: 900px) {
+  section.intro > .container.intro-wrap {
+    max-width: 1280px;
+  }
+}
+/* Search page primary action */
+.page-content a[href*="exprealty.com"]:not(.btn-primary):not(.btn-secondary) {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.85rem 1.4rem;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.page-content a[href*="exprealty.com"]:hover {
+  background: #000;
+}
+/* Centered button wrapper */
+.button-center {
+  text-align: center;
+}
+
+/* Primary button */
+.btn-primary {
+  display: inline-block;
+  padding: 0.85rem 1.4rem;
+  background-color: #111;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: #000;
+}
+
+/* Secondary button */
+.btn-secondary {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.7rem 1.25rem;
+  border: 1px solid #111;
+  border-radius: 999px;
+  color: #111;
+  background: transparent;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  background: #111;
+  color: #fff;
+}
+/* Search page card */
+.search-card {
+  max-width: 760px;
+  margin: 2rem auto;
+  padding: 2rem 1.75rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 18px;
+  background: #fff;
+  text-align: center;
+}
+
+.search-card p {
+  margin: 0 0 1rem;
+}
+/* ====================== END style.css ====================== */
+
+/* ===================== BEGIN refined.css ===================== */
+/* =========================================================
+   Refined theme layer (loads after style.css)
+   Goal: match the refined mockup look exactly
+   ========================================================= */
+
+:root{
+  --max: 1200px;
+  --content: 1000px;
+  --pad-x: 24px;
+
+  --accent: #004b8d;
+  --accentHover: #1f6fb8;
+
+  --text: #333;
+  --muted: #555;
+  --bg: #fafafa;
+
+background-image: url("/assets/images/hero.png");
+
+}
+
+/* Base look */
+body{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  overflow-x: hidden;
+
+  /* account for fixed header */
+  padding-top: 74px;
+}
+
+a{
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover{
+  color: var(--accentHover);
+}
+
+/* =========================================================
+   Header / Navigation (mockup match)
+   ========================================================= */
+
+.site-header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+}
+
+/* Your site uses .container, so make it behave like mockup .nav-container */
+.site-header .container{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 16px var(--pad-x);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Brand */
+.brand{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+/* Links row */
+.site-nav ul{
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a{
+  font-weight: 500;
+  color: var(--accent);
+}
+
+/* CTA (Connect) */
+.site-nav a.cta{
+  padding: 8px 16px;
+  border: 2px solid var(--accent);
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.site-nav a.cta:hover{
+  background-color: var(--accent);
+  color: #fff;
+}
+
+/* Active state */
+.site-nav li.active a,
+.site-nav a[aria-current="page"]{
+  color: var(--text);
+}
+
+/* Mobile toggle (only if you already have it wired) */
+.mobile-nav-toggle{
+  display: none;
+  cursor: pointer;
+  font-size: 22px;
+  color: var(--accent);
+}
+
+@media (max-width: 860px){
+  .mobile-nav-toggle{ display: block; }
+
+  .site-header .container{
+    flex-wrap: wrap;
+  }
+
+  .site-nav{
+    width: 100%;
+  }
+
+  .site-nav ul{
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding-top: 12px;
+  }
+
+  .site-nav ul.open{
+    display: flex;
+  }
+}
+
+/* =========================================================
+   Hero (mockup match)
+   ========================================================= */
+
+.hero{
+  height: 90vh;
+  background-image: var(--hero-image);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero-content{
+  position: relative;
+  text-align: center;
+  color: #fff;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-content h1{
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hero-content p{
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-content .hero-cta{
+  background-color: var(--accent);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+.hero-content .hero-cta:hover{
+  background-color: var(--accentHover);
+}
+
+/* =========================================================
+   Main content + sections (mockup match)
+   ========================================================= */
+
+main{
+  margin-top: 80px;
+}
+
+.section{
+  max-width: var(--content);
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+.section h2{
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.lead{
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+}
+
+/* =========================================================
+   Blog cards (mockup match)
+   ========================================================= */
+
+.blog-cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.blog-card{
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.blog-card:hover{
+  transform: translateY(-4px);
+}
+
+.blog-card img{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.blog-card-content{
+  padding: 1rem 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card-content h3{
+  font-size: 1.25rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.blog-card-content p{
+  flex: 1;
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.blog-card-content .read-more{
+  align-self: flex-start;
+  background-color: var(--accent);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+.blog-card-content .read-more:hover{
+  background-color: var(--accentHover);
+}
+
+/* =========================================================
+   Footer (mockup match)
+   ========================================================= */
+
+footer{
+  background-color: var(--accent);
+  color: #fff;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+footer p{
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+footer a{
+  color: #fff;
+  text-decoration: underline;
+  margin: 0 0.5rem;
+  font-size: 0.9rem;
+}
+footer a:hover{
+  color: #d6e4f4;
+}
+/* Footer (force mockup blue) */
+.site-footer{
+  background-color: var(--accent);
+  color: #fff;
+  padding: 2rem 1.5rem;
+}
+
+.site-footer a{
+  color: #fff;
+  text-decoration: underline;
+}
+
+.site-footer a:hover{
+  color: #d6e4f4;
+}
+
+.site-footer .container{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+  text-align: center;
+}
+.footer-disclaimer{
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  opacity: 0.75;
+  line-height: 1.5;
+}
+
+.footer-copy{
+  margin-top: 1rem;
+  opacity: 0.95;
+}
+
+.footer-links{
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.footer-social{
+  display: flex;
+  justify-content: center;
+  margin: 0.75rem 0;
+}
+
+.footer-social a{
+  text-decoration: none;
+}
+.footer-copy{
+  color: #ffffff;
+  opacity: 1;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+.site-footer p{
+  margin-bottom: 0.25rem;
+}
+
+.footer-links{
+  margin-bottom: 0.25rem;
+}
+
+.footer-social{
+  margin: 0.25rem 0;
+}
+/* Homepage blog cards – tighten to match mockup */
+
+.section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1.25rem;
+}
+
+.blog-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
+
+.blog-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.blog-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-card-content {
+  padding: 1rem 1.1rem;
+}
+
+.blog-card-content h3 {
+  font-size: 1.1rem;
+  line-height: 1.35;
+  margin-bottom: 0.4rem;
+}
+
+.blog-card-content p {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .blog-cards {
+    grid-template-columns: 1fr;
+  }
+}
+/* HERO: enforce height + background image */
+.hero {
+  min-height: 70vh;
+  background-image: url("/assets/images/hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+/* Widen Latest Insights section only */
+.section:has(.blog-cards) {
+  max-width: 1200px;
+}
+
+/* 3-up editorial grid */
+.blog-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* Mobile safety */
+@media (max-width: 900px) {
+  .blog-cards {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 900px) {
+  .section.intro-wide {
+    max-width: 1280px;
+    width: 100%;
+  }
+}
+/* ====================== END refined.css ====================== */
+
+/* ===================== BEGIN site.css ===================== */
+/* =========================================================
+   tanvirbhupal.com — Unified stylesheet (merged + cleaned)
+   ========================================================= */
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.6;
+  color: #111;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+ul, ol { margin: 0; padding: 0; }
+p { margin: 0 0 1rem; }
+
+/* ---------- Design tokens ---------- */
+:root{
+  --max: 1200px;
+  --content: 1000px;
+  --pad-x: 24px;
+
+  --accent: #004b8d;
+  --accentHover: #1f6fb8;
+
+  --text: #333;
+  --muted: #555;
+  --bg: #fff;
+}
+
+/* ---------- Layout helpers ---------- */
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+}
+
+/* ---------- Header / Nav (name left, nav right) ---------- */
+.site-header{
+  position: sticky;   /* stable, no body padding hacks */
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.96);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  backdrop-filter: blur(8px);
+}
+
+.site-header .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.brand{
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  color: #111;
+}
+
+.site-nav ul{
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.site-nav a{
+  font-size: 0.95rem;
+  color: #222;
+  opacity: 0.9;
+}
+
+.site-nav a:hover{ color: var(--accent); opacity: 1; }
+
+.site-nav li.active a{
+  color: var(--accent);
+  opacity: 1;
+}
+
+/* ---------- Hero (image stays CSS-based) ---------- */
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  min-height: 420px;
+  max-height: 620px;
+
+  background-image: url('/assets/images/hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.32);
+}
+
+.hero-content{
+  position: relative;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1{
+  font-family: "Libre Baskerville", serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.15;
+  color: #fff;
+  margin: 0 0 12px;
+}
+
+.hero p{
+  margin: 0;
+  color: rgba(255,255,255,0.92);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  max-width: 56ch;
+}
+
+/* ---------- Sections ---------- */
+.section{
+  max-width: var(--content);
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+.section h2{
+  font-family: "Libre Baskerville", serif;
+  font-size: 2rem;
+  margin: 0 0 1.25rem;
+  color: #111;
+}
+
+.statement{
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--muted);
+}
+
+/* Desktop: widen only the two homepage sections we marked */
+@media (min-width: 900px){
+  .section.intro-wide,
+  .section.latest-insights{
+    max-width: 1280px;
+    width: 100%;
+  }
+}
+
+/* ---------- Buttons/links ---------- */
+.read-more{
+  display: inline-block;
+  margin-top: 0.9rem;
+  padding: 0.55rem 0.95rem;
+  border: 1px solid #111;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #111;
+}
+
+.read-more:hover{
+  background: #111;
+  color: #fff;
+}
+
+/* ---------- Blog cards (single source of truth) ---------- */
+.blog-cards{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 900px){
+  .blog-cards{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.blog-card{
+  display: block;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  color: inherit;
+}
+
+.blog-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+}
+
+.blog-card img{
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.blog-card-content{
+  padding: 18px 18px 20px;
+}
+
+.blog-card-content h3{
+  margin: 0 0 10px;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  color: #111;
+}
+
+.blog-card-content p{
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* ---------- A11y utility ---------- */
+.visually-hidden{
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Footer (leave your approved footer styling intact if present elsewhere) ---------- */
+.site-footer{
+  padding: 56px 0;
+  background: #111;
+  color: rgba(255,255,255,0.88);
+}
+
+.site-footer .container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.site-footer a{ color: rgba(255,255,255,0.92); }
+.site-footer a:hover{ color: #fff; }
+/* ====================== END site.css ====================== */
+
