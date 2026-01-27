@@ -1341,3 +1341,5 @@ main.page-content > section.section.latest-insights article {
   border-radius: 16px !important;
   overflow: hidden;
 }
+.section.intro-wide { outline: 6px solid red !important; }
+.section.latest-insights { outline: 6px solid blue !important; }
