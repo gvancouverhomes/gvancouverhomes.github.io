@@ -1341,5 +1341,44 @@ main.page-content > section.section.latest-insights article {
   border-radius: 16px !important;
   overflow: hidden;
 }
-.section.intro-wide { outline: 6px solid red !important; }
-.section.latest-insights { outline: 6px solid blue !important; }
+/* =========================================================
+   HOMEPAGE: stop centering + remove square cards (FINAL)
+   Applies only to the two homepage sections:
+   <section class="section intro-wide"> and <section class="section latest-insights">
+   ========================================================= */
+
+/* Left-anchor these sections (not centered) and widen them */
+@media (min-width: 900px) {
+  main.page-content > section.section.intro-wide,
+  main.page-content > section.section.latest-insights {
+    max-width: 1280px !important;   /* wider than --content */
+    margin-left: 0 !important;      /* left anchored */
+    margin-right: auto !important;  /* prevents centering */
+    padding-left: clamp(2rem, 6vw, 6rem) !important;
+    padding-right: clamp(2rem, 6vw, 6rem) !important;
+  }
+}
+
+/* Keep intro readable but not “boxed” too tightly */
+.section.intro-wide h2,
+.section.intro-wide .statement,
+.section.intro-wide .read-more {
+  max-width: 1000px;               /* stop the 720px squeeze */
+  text-align: left;
+}
+
+/* Blog: make sure the grid itself isn’t re-centering */
+.section.latest-insights .blog-cards,
+.section.latest-insights .latest-grid {
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+/* Kill the square look, regardless of which card class is used */
+.section.latest-insights .blog-card,
+.section.latest-insights .post-card,
+.section.latest-insights article {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+}
+
