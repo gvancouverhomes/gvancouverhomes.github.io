@@ -246,3 +246,75 @@ p + p {
 .blog-card p {
   text-decoration: none;
 }
+/* =========================
+   Header + Horizontal Nav
+   ========================= */
+
+.site-header {
+  width: 100%;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+/* Brand (name on the left) */
+.site-header .brand,
+.site-header .site-title,
+.site-header a.brand {
+  display: inline-block;
+  text-decoration: none;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+/* Nav (links on the right) */
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav li {
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  text-decoration: none;
+  padding: 6px 0;
+  line-height: 1.1;
+}
+
+/* Active state (works with your Jekyll active class) */
+.site-nav .active > a,
+.site-nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Mobile: stack cleanly, keep it readable */
+@media (max-width: 720px) {
+  .site-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav ul {
+    flex-wrap: wrap;
+    gap: 12px 16px;
+  }
+}
