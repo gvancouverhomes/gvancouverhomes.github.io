@@ -123,6 +123,13 @@ p + p {
   padding-left: 24px;
   padding-right: 24px;
 }
+/* Ensure pages without a .container still center properly */
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
 
 .section {
   padding: 64px 0;
