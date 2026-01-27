@@ -180,6 +180,19 @@ main li,
 main blockquote {
   max-width: 68ch;
 }
+/* Center reading content as a column (safe targets only) */
+main h1,
+main h2,
+main h3,
+main p,
+main ul,
+main ol,
+main blockquote,
+main img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 
 /* =========================
