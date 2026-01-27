@@ -15,6 +15,14 @@ permalink: /
   "inLanguage": "en-CA"
 }
 </script>
+<section class="section opening-image">
+  <div class="container">
+    <img
+      src="/assets/images/hero.png"
+      alt="Greater Vancouver residential streets and homes"
+      loading="eager">
+  </div>
+</section>
 
 <section class="hero">
   <div class="hero-content">
