@@ -1381,4 +1381,64 @@ main.page-content > section.section.latest-insights article {
   border-radius: 16px !important;
   overflow: hidden !important;
 }
+/* =========================================================
+   LOCKED: Homepage layout baseline (do not edit)
+   Goal: clean, centered, premium, predictable
+   ========================================================= */
+
+/* Keep homepage sections in a readable centered column */
+main.page-content > section.section.intro-wide,
+main.page-content > section.section.latest-insights {
+  max-width: 1100px !important;
+  margin: 3.5rem auto !important;
+  padding: 0 24px !important;
+}
+
+/* Intro spacing */
+main.page-content > section.section.intro-wide h2 {
+  margin-bottom: 1.25rem !important;
+}
+main.page-content > section.section.intro-wide .statement {
+  max-width: 62ch !important;
+  margin: 0 auto 1.25rem !important;
+}
+main.page-content > section.section.intro-wide .read-more {
+  display: inline-block !important;
+}
+
+/* Latest Insights: clean 3-up grid */
+main.page-content > section.section.latest-insights .blog-cards,
+main.page-content > section.section.latest-insights .latest-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 28px !important;
+  margin-top: 1.5rem !important;
+}
+
+/* Tablet and mobile */
+@media (max-width: 1000px) {
+  main.page-content > section.section.latest-insights .blog-cards,
+  main.page-content > section.section.latest-insights .latest-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 680px) {
+  main.page-content > section.section.latest-insights .blog-cards,
+  main.page-content > section.section.latest-insights .latest-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Card shape and image behavior (removes "square" feeling) */
+main.page-content > section.section.latest-insights .blog-card,
+main.page-content > section.section.latest-insights .post-card,
+main.page-content > section.section.latest-insights article {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+}
+main.page-content > section.section.latest-insights img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+}
 
