@@ -1232,5 +1232,41 @@ p { margin: 0 0 1rem; }
 
 .site-footer a{ color: rgba(255,255,255,0.92); }
 .site-footer a:hover{ color: #fff; }
-/* ====================== END site.css ====================== */
+/* ===============================
+   Homepage: Intro + Blog layout
+   =============================== */
+
+/* 1. Let intro-wide actually be wide */
+.section.intro-wide {
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: clamp(2rem, 6vw, 6rem);
+  padding-right: clamp(2rem, 6vw, 6rem);
+}
+
+/* 2. Left-align the content inside intro-wide */
+.section.intro-wide h2,
+.section.intro-wide p,
+.section.intro-wide .read-more {
+  text-align: left;
+  max-width: 720px;
+}
+
+/* 3. Blog section: not centered, not boxed */
+.section.latest-insights {
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: clamp(2rem, 6vw, 6rem);
+  padding-right: clamp(2rem, 6vw, 6rem);
+}
+
+/* 4. Blog cards: restore rhythm, kill “square” feel */
+.section.latest-insights .post,
+.section.latest-insights article {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
 
