@@ -1304,3 +1304,40 @@ main.page-content > .section:not(.intro-wide):not(.latest-insights) {
   border-radius: 16px;
   overflow: hidden;
 }
+/* =========================================================
+   FINAL HOMEPAGE WIDTH + CARD SHAPE FIX
+   Applies ONLY to homepage sections already tagged:
+   .section.intro-wide and .section.latest-insights
+   ========================================================= */
+
+/* 1) Unbox these two sections completely */
+main.page-content > section.section.intro-wide,
+main.page-content > section.section.latest-insights {
+  max-width: none !important;      /* overrides .section max-width */
+  width: 100% !important;
+  margin: 0 !important;            /* kills 4rem auto centering */
+  padding: 0 !important;           /* removes .section side padding */
+}
+
+/* 2) Reintroduce intentional page gutters inside those sections */
+main.page-content > section.section.intro-wide > *,
+main.page-content > section.section.latest-insights > * {
+  padding-left: clamp(2rem, 6vw, 6rem);
+  padding-right: clamp(2rem, 6vw, 6rem);
+}
+
+/* If those sections contain direct text nodes only (no inner wrappers),
+   this keeps them readable */
+main.page-content > section.section.intro-wide h2,
+main.page-content > section.section.intro-wide .statement,
+main.page-content > section.section.intro-wide .read-more {
+  max-width: 720px;
+}
+
+/* 3) Kill the “square” blog card feel (wins over refined.css 8px) */
+main.page-content > section.section.latest-insights .blog-card,
+main.page-content > section.section.latest-insights .post-card,
+main.page-content > section.section.latest-insights article {
+  border-radius: 16px !important;
+  overflow: hidden;
+}
