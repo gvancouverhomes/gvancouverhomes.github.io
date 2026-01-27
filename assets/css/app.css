@@ -133,11 +133,12 @@ p + p {
   padding-bottom: 48px;
 }
 /* Global readable text width */
-.page-content p,
-.page-content li,
-.page-content blockquote {
+main p,
+main li,
+main blockquote {
   max-width: 68ch;
 }
+
 
 /* =========================
    4. Homepage structure
