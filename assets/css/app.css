@@ -241,9 +241,10 @@ main {
 
 .hero-content p {
   margin-top: 14px;
-  max-width: 72ch;
+  max-width: none;
   color: #2b2b2b;
 }
+
 
 /* Intro-wide */
 .section.intro-wide h2 {
