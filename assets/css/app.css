@@ -240,6 +240,20 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
+/* Editorial landing page rhythm for hero text */
+.hero-content .statement {
+  line-height: 1.5;
+}
+
+.hero-content .statement br {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.hero-content .statement + .read-more {
+  margin-top: 22px;
+  display: inline-block;
+}
 
 .hero-content h1 {
   max-width: none;
