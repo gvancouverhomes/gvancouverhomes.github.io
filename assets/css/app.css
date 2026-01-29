@@ -240,6 +240,15 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
+/* Tighten homepage flow between intro-wide and Latest Insights */
+.section.intro-wide {
+  padding-bottom: 36px;
+}
+
+.section.latest-insights {
+  padding-top: 36px;
+}
+
 /* Editorial landing page rhythm for hero text */
 .hero-content .statement {
   line-height: 1.5;
