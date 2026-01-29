@@ -250,10 +250,10 @@ main {
   margin-bottom: 6px;
 }
 
-.hero-content .statement + .read-more {
-  margin-top: 22px;
-  display: inline-block;
+.hero-content .statement {
+  margin-bottom: 32px;
 }
+
 
 .hero-content h1 {
   max-width: none;
