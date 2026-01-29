@@ -50,8 +50,7 @@ permalink: /
       Decisions are made with confidence, not noise.<br>
       Your time, energy, and long-term vision are protected at every step.
     </p>
-
-    <a class="read-more" href="/blog/">Insights</a>
+ 
   </div>
 </section>
 
