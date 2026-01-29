@@ -57,9 +57,6 @@ permalink: /
 
 
 <section class="section latest-insights">
-  <h2>Latest Insights</h2>
-
-<section class="section latest-insights">
   <div class="container">
     <h2>Latest Insights</h2>
 
