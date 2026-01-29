@@ -273,6 +273,14 @@ main {
   max-width: none;
   color: #2b2b2b;
 }
+/* Homepage: center the editorial text sections into a calm column */
+.page-content > .section:not(.opening-image):not(.latest-insights) > h2,
+.page-content > .section:not(.opening-image):not(.latest-insights) > p,
+.page-content > .section:not(.opening-image):not(.latest-insights) > .statement {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 
