@@ -211,6 +211,17 @@ main {
 /* =========================
    4. Homepage structure
    ========================= */
+/* Homepage: unify text sections into a calm editorial column
+   Works whether content is direct, or wrapped in a .container
+   Does NOT touch opening image or latest insights (cards/grid)
+*/
+.page-content > .section:not(.opening-image):not(.latest-insights) > :where(h2, p, ul, ol, blockquote, .statement, img),
+.page-content > .section:not(.opening-image):not(.latest-insights) .container > :where(h2, p, ul, ol, blockquote, .statement, img) {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 /* Opening magazine image */
 .section.opening-image {
@@ -239,10 +250,6 @@ main {
   max-width: 760px;
   margin-left: auto;
   margin-right: auto;
-}
-/* Tighten homepage flow between intro-wide and Latest Insights */
-.section.intro-wide {
-  padding-bottom: 36px;
 }
 
 .section.latest-insights {
@@ -273,16 +280,6 @@ main {
   max-width: none;
   color: #2b2b2b;
 }
-/* Homepage: center the editorial text sections into a calm column */
-.page-content > .section:not(.opening-image):not(.latest-insights) > h2,
-.page-content > .section:not(.opening-image):not(.latest-insights) > p,
-.page-content > .section:not(.opening-image):not(.latest-insights) > .statement {
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
 
 /* Intro-wide */
 .section.intro-wide h2 {
