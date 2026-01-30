@@ -324,6 +324,18 @@ main {
   max-width: 68ch;
   color: #1a1a1a;
 }
+/* Homepage: statement block should feel intentional (not like stacked paragraphs) */
+.section.intro-wide .statement {
+  max-width: 56ch;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* If statement uses <br>, soften the breaks so it reads as a single block */
+.section.intro-wide .statement br {
+  display: block;
+  margin-bottom: 10px;
+}
 
 .section.intro-wide .read-more {
   display: inline-block;
