@@ -251,8 +251,22 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
+@media (min-width: 900px) {
+  /* Hero headline + subtext: single line on desktop */
+  .hero-content h1 {
+    white-space: nowrap;
+  }
 
-  /* Homepage section headings: keep to max 2 lines */
+  .hero-content p {
+    white-space: nowrap;
+    font-size: 18px;
+  }
+
+  .hero-content p br {
+    display: none;
+  }
+
+  /* Homepage section headings: reduce wrapping */
   .page-content > .section h2 {
     max-width: 900px;
   }
@@ -285,12 +299,6 @@ main {
   margin-top: 14px;
   max-width: none;
   color: #2b2b2b;
-}
-@media (min-width: 900px) {
-  /* Hero headline: keep on one line */
-  .hero-content h1 {
-    white-space: nowrap;
-  }
 
   /* Homepage section headings: keep to max 2 lines */
   .page-content > .section h2 {
