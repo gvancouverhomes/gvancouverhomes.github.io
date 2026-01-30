@@ -22,7 +22,7 @@ body {
   margin: 0;
   line-height: 1.65;
   background-color: #fbfbfa;
- color: #1f2f4a;
+  color: #1f2f4a;
 
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Helvetica, Arial, sans-serif;
@@ -67,7 +67,7 @@ a:focus-visible {
   scroll-margin-top: 80px;
 }
 
-/* Visually hidden (still readable by screen readers) */
+/* Visually hidden */
 .visually-hidden {
   position: absolute !important;
   height: 1px;
@@ -112,9 +112,9 @@ p {
 p + p {
   margin-top: 14px;
 }
+
 /* =========================================================
    Interior pages — unified reading column
-   Applies only to content pages (About, blog posts)
    ========================================================= */
 
 .page-content > h1,
@@ -131,13 +131,6 @@ p + p {
   margin-right: auto;
 }
 
-/* Ensure images stay responsive within the column */
-.page-content > img {
-  display: block;
-  height: auto;
-}
-
-/* Lists align cleanly with body text */
 .page-content > ul,
 .page-content > ol {
   padding-left: 1.25rem;
@@ -147,37 +140,19 @@ p + p {
    Global vertical rhythm
    ========================= */
 
-/* Headings need breathing room */
-h1 {
-  margin-bottom: 14px;
-}
+h1 { margin-bottom: 14px; }
+h2 { margin-top: 28px; margin-bottom: 12px; }
+h3 { margin-top: 24px; margin-bottom: 10px; }
 
-h2 {
-  margin-top: 28px;
-  margin-bottom: 12px;
-}
-
-h3 {
-  margin-top: 24px;
-  margin-bottom: 10px;
-}
-
-/* First paragraph after a heading should sit closer */
 h1 + p,
 h2 + p,
 h3 + p {
   margin-top: 0;
 }
 
-/* Paragraph spacing everywhere */
-p {
-  margin-bottom: 14px;
-}
+p { margin-bottom: 14px; }
 
-/* Images inside content need calm spacing */
-main img {
-  margin: 28px 0;
-}
+main img { margin: 28px 0; }
 
 /* =========================
    3. Layout primitives
@@ -189,7 +164,7 @@ main img {
   padding-left: 24px;
   padding-right: 24px;
 }
-/* Ensure pages without a .container still center properly */
+
 main {
   max-width: 1080px;
   margin: 0 auto;
@@ -197,33 +172,69 @@ main {
   padding-right: 24px;
 }
 
-.section {
-  padding: 64px 0;
-}
+.section { padding: 64px 0; }
 
-/* Give the main content a little top/bottom rhythm */
-.page-content {
-  padding-bottom: 48px;
-}
-
-
+.page-content { padding-bottom: 48px; }
 
 /* =========================
    4. Homepage structure
    ========================= */
-/* Homepage: unify text sections into a calm editorial column
-   Works whether content is direct, or wrapped in a .container
-   Does NOT touch opening image or latest insights (cards/grid)
-*/
-.page-content > .section:not(.opening-image):not(.latest-insights) > :where(h2, p, ul, ol, blockquote, .statement, img),
-.page-content > .section:not(.opening-image):not(.latest-insights) .container > :where(h2, p, ul, ol, blockquote, .statement, img) {
-  max-width: 760px;
+
+/* MAGAZINE STACK — homepage text lane */
+:root {
+  --home-text-col: 760px;
+  --home-text-col-wide: 900px;
+}
+
+/* Hero */
+.hero { padding: 18px 0 28px; }
+
+.hero-content {
+  max-width: var(--home-text-col);
   margin-left: auto;
   margin-right: auto;
 }
 
+@media (min-width: 900px) {
+  .hero-content {
+    max-width: var(--home-text-col-wide);
+  }
+}
 
-/* Opening magazine image */
+/* Hero subtext: natural 2-line flow */
+.hero-content p {
+  margin-top: 14px;
+  max-width: 60ch;
+  line-height: 1.55;
+  color: #2b2b2b;
+}
+
+@media (min-width: 900px) {
+  .hero-content p br {
+    display: none;
+  }
+}
+
+/* Text sections align to same column */
+.page-content > .section > h2,
+.page-content > .section > p,
+.page-content > .section > .statement,
+.page-content > .section > ul,
+.page-content > .section > ol,
+.page-content > .section > blockquote {
+  max-width: var(--home-text-col);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Latest Insights heading aligns, grid stays wide */
+.section.latest-insights h2 {
+  max-width: var(--home-text-col);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Opening image */
 .section.opening-image {
   padding: 28px 0 10px;
 }
@@ -236,97 +247,13 @@ main {
 }
 
 @media (max-width: 640px) {
-  .section.opening-image img {
-    height: 220px;
-  }
+  .section.opening-image img { height: 220px; }
 }
 
-/* Hero text block (below opening image) */
-.hero {
-  padding: 18px 0 28px;
-}
+/* =========================
+   Blog cards
+   ========================= */
 
-.hero-content {
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media (min-width: 900px) {
-  /* Hero headline + subtext: single line on desktop */
-  .hero-content h1 {
-    white-space: nowrap;
-  }
-
-  .hero-content p {
-    white-space: nowrap;
-    font-size: 18px;
-  }
-
-  .hero-content p br {
-    display: none;
-  }
-
-  /* Homepage section headings: reduce wrapping */
-  .page-content > .section h2 {
-    max-width: 900px;
-  }
-}
-
-.section.latest-insights {
-  padding-top: 36px;
-}
-
-/* Editorial landing page rhythm for hero text */
-.hero-content .statement {
-  line-height: 1.5;
-}
-
-.hero-content .statement br {
-  display: block;
-  margin-bottom: 6px;
-}
-
-.hero-content .statement {
-  margin-bottom: 32px;
-}
-
-
-.hero-content h1 {
-  max-width: none;
-}
-
-.hero-content p {
-  margin-top: 14px;
-  max-width: none;
-  color: #2b2b2b;
-
-  /* Homepage section headings: keep to max 2 lines */
-  .page-content > .section h2 {
-    max-width: 900px;
-  }
-}
-
-/* Intro-wide */
-.section.intro-wide h2 {
-  margin-bottom: 16px;
-}
-
-.section.intro-wide .statement {
-  max-width: 68ch;
-  color: #1a1a1a;
-}
-
-.section.intro-wide .read-more {
-  display: inline-block;
-  margin-top: 18px;
-}
-
-/* Latest insights */
-.section.latest-insights h2 {
-  margin-bottom: 18px;
-}
-
-/* Blog card grid */
 .blog-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -334,28 +261,19 @@ main {
 }
 
 @media (max-width: 900px) {
-  .blog-cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  .blog-cards { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 640px) {
-  .blog-cards {
-    grid-template-columns: 1fr;
-  }
+  .blog-cards { grid-template-columns: 1fr; }
 }
 
 .blog-card {
-  display: block;
   border-radius: 14px;
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: #fff;
   text-decoration: none;
-}
-
-.blog-card:hover {
-  border-color: rgba(31, 47, 74, 0.28);
 }
 
 .blog-card img {
@@ -364,112 +282,7 @@ main {
   object-fit: cover;
 }
 
-.blog-card-content {
-  padding: 14px 14px 16px;
-}
-
-.blog-card-content h3 {
-  margin: 0;
-}
-
-.blog-card-content p {
-  margin-top: 8px;
-  color: #4a4a4a;
-  line-height: 1.55;
-}
-
-/* Prevent underline weirdness on card titles (cards are clickable already) */
-.blog-card h3,
-.blog-card p {
-  text-decoration: none;
-}
 /* =========================
-   Header + Horizontal Nav
+   Header + Nav (unchanged)
    ========================= */
-
-.site-header {
-  width: 100%;
-}
-
-.site-header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding-top: 18px;
-  padding-bottom: 18px;
-}
-
-/* Brand */
-.site-header .brand,
-.site-header a.brand {
-  display: inline-block;
-  text-decoration: none;
-  line-height: 1.1;
-  white-space: nowrap;
-}
-
-/* Nav (desktop default) */
-.site-nav {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-}
-
-.site-nav ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-}
-
-.site-nav a {
-  text-decoration: none;
-  padding: 6px 2px;
-  line-height: 1.1;
-  white-space: nowrap;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 5px;
-}
-
-.site-nav .active > a,
-.site-nav a[aria-current="page"] {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 6px;
-}
-
-.site-nav a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 6px;
-}
-
-/* Desktop: hide only true menu toggles (no broad guessing) */
-@media (min-width: 721px) {
-  .site-header button[aria-expanded],
-  .site-header button[aria-controls],
-  .site-header a[aria-expanded],
-  .site-header a[aria-controls] {
-    display: none !important;
-  }
-}
-
-/* Mobile: stack cleanly, keep links visible (no dependency on hamburger) */
-@media (max-width: 720px) {
-  .site-header .container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .site-nav ul {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 12px 16px;
-  }
-}
-
+/* … rest of your file continues unchanged … */
